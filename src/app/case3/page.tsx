@@ -4,7 +4,7 @@ const SECTION_BLUE = "text-blue-600 dark:text-blue-400";
 
 export default function ScanAudienceCaseStudy() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950">
+    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
     
       {/* Hero Section */}
       <section className="mx-auto w-full max-w-6xl px-8 py-12 lg:py-16">

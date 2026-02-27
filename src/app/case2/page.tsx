@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SocialAlertCaseStudy() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950">
+    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
     
 
       {/* Alert Banner */}
