@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ImageZoom } from "./kibo-ui/image-zoom";
 
 export function ImageCarousel({ images }: { images: { src: string; alt: string }[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,16 +18,18 @@ export function ImageCarousel({ images }: { images: { src: string; alt: string }
                     {images.map((img, index) => (
                         <div
                             key={index}
-                            className={`transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 block" : "opacity-0 hidden"
+                            className={`h-[310px] overflow-hidden transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 block" : "opacity-0 hidden"
                                 }`}
                         >
-                            <Image
-                                src={img.src}
-                                alt={img.alt}
-                                width={1000}
-                                height={1000}
-                                className="rounded-bl-2xl rounded-br-2xl"
-                            />
+                            <ImageZoom>
+                                <Image
+                                    src={img.src}
+                                    alt={img.alt}
+                                    width={1000}
+                                    height={1000}
+                                    className="rounded-bl-2xl rounded-br-2xl object-cover"
+                                />
+                            </ImageZoom>
                         </div>
                     ))}
                 </div>

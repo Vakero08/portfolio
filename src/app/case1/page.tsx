@@ -77,7 +77,7 @@ export default function TokinAiCaseStudy() {
       <section className="mx-auto w-full max-w-6xl px-8 py-8">
         <div className="flex gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <h2 className="mb-6 text-4xl font-bold  dark:text-blue-400">Muchos emprendedores y creadores de contenido enfrentan dificultades para mantener una presencia activa y consistente en redes sociales.</h2>
+            <h2 className="mb-6 text-4xl font-bold  dark:text-blue-400">Muchos emprendedores enfrentan dificultades para mantener una presencia activa y consistente en redes sociales.</h2>
             <p className="mb-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               Los pequeños emprendedores destinan entre 5 y 8 horas semanales a la creación de contenido, tiempo que podría invertirse en actividades estratégicas para el crecimiento de su negocio. Además, el 73% de los usuarios encuestados manifestó sentirse abrumado por la necesidad de producir contenido de calidad de forma constante en múltiples plataformas, principalmente por falta de tiempo, recursos o conocimientos especializados.
             </p>
@@ -178,7 +178,7 @@ export default function TokinAiCaseStudy() {
                       Problema identificado
                     </th>
                     <th scope="col" className="px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
-                      Emprendedores afectados
+                      Emprendedores encuestados (80)
                     </th>
                     <th scope="col" className="px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
                       Porcentaje
@@ -190,64 +190,50 @@ export default function TokinAiCaseStudy() {
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
                       Falta de tiempo para publicar
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">89</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">74%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">69</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">86%</td>
                   </tr>
                   <tr className="bg-accent/60">
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
                       Falta de conocimiento en marketing digital
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">83</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">69%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">43</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">53%</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
-                      No saben qué contenido publicar
+                      No han usado herramientas de IA para crear contenido
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">76</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">63%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">46</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">58%</td>
                   </tr>
                   <tr className="bg-accent/60">
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
-                      No tienen página web
+                      No tienen página web, ni redes sociales
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">58</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">48%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
-                      No tienen estrategia clara de contenido
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">71</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">59%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">32</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">40%</td>
                   </tr>
                   <tr className="bg-accent/60">
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
                       Publican de forma inconsistente
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">92</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">77%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
-                      No tienen redes sociales activas
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">41</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">34%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">44</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">55%</td>
                   </tr>
                   <tr className="bg-accent/60">
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
                       No miden resultados ni métricas
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">67</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">56%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">83%</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
                       No saben cómo hacer publicidad (ads)
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">79</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">66%</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">62</td>
+                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">77%</td>
                   </tr>
                 </tbody>
               </table>
@@ -307,6 +293,221 @@ export default function TokinAiCaseStudy() {
               <li className="ml-4"> <b>Design System:</b> Unificar el diseño visual con un sistema de colores coherente, garantizando al mismo tiempo el pleno cumplimiento de las normas de accesibilidad.</li>
               
             </ul> */}
+
+            {/* Personalizacion – Iteraciones (Figma section) */}
+            <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground dark:bg-card">
+              {/* Header */}
+              <div className="flex items-center gap-3">
+                <Clock className="h-6 w-6 text-primary" />
+                <h4 className="text-2xl font-bold text-primary">Personalización de contenido</h4>
+              </div>
+              <p className="mt-4 max-w-3xl text-sm text-foreground md:text-base">
+                Para esta arista, se planteó un onboarding en un flujo progresivo de 3 pasos, la primera vez que el usuario entra para que proporcione datos de su negocio y datos de la competencia. Para asi poder generar contenido personalizado y alineado a la marca.
+              </p>
+
+              {/* Screens row */}
+              <div className="mt-10 grid gap-8 md:grid-cols-3">
+                {/* Pantalla 1 */}
+                <div className="flex flex-col gap-3">
+                  <h1 className=" font-bold text-foreground">Identificar la marca</h1>
+                  <div className="rounded-2xl border  bg-muted p-px">
+                    <div className="flex items-center gap-2 border-b  px-3 py-2">
+                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                    </div>
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/onboard_1.svg"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                        />
+                      </ImageZoom>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">
+                    <b>Paso 1:</b> En este paso el usuario debía iniciar sesioón con sus redes sociales para poder obtener los datos de su negocio como su Nombre de negocio, seguidores, publicaciones, etc.
+                  </p>
+                </div>
+
+                {/* Pantalla 2 */}
+                <div className="flex flex-col gap-3">
+                  <h1 className=" font-bold text-foreground">Identificar la competencia</h1>
+                  <div className="rounded-2xl border  bg-muted p-px">
+
+                    <div className="flex items-center gap-2 border-b  px-3 py-2">
+                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                    </div>
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/onboarding_2.svg"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                        />
+                      </ImageZoom>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">
+                    <b>Paso 2:</b> En este paso el usuario debía ingresar la URL's de sus competencias para que la IA pueda analizar y obtener información de su competencia.
+                  </p>
+                </div>
+
+                {/* Pantalla 3 */}
+                <div className="flex flex-col gap-3">
+                  <h1 className=" font-bold text-foreground">Revisar y editar los datos inferidos</h1>
+                  <div className="rounded-2xl border  bg-muted p-px">
+                    <div className="flex items-center gap-2 border-b  px-3 py-2">
+                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                    </div>
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/onboarding_3.svg"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                        />
+                      </ImageZoom>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">
+                    <b>Paso 3:</b> En este paso el usuario podía revisar y editar los datos obtenidos de su negocio y de su competencia. Que fueron obtenidos con sus redes sociales y las URL's de sus competencias. Y algunos como el tono de sus publicaciones, etc. Que fueron inferidos por la IA.
+                  </p>
+                </div>
+              </div>
+
+              {/* Hallazgo */}
+              <div className="mt-8 flex flex-col  gap-4 md:flex-row md:items-center">
+                <span className="inline-flex w-fit items-center rounded-full bg-[#fef3c6] px-6 py-1 text-xl font-semibold uppercase tracking-[0.12em] text-[#bb4d00]">
+                  Hallazgos
+                </span>
+                <p className="max-w-3xl text-sm leading-relaxed text-foreground">
+                  En las pruebas iniciales se detectó los siguientes incovenientes:
+                  <ul className="list-disc list-inside">
+                    <li className="text-sm leading-relaxed text-foreground">El flujo de onboarding era demasiado extenso. Los usuarios abandonaban antes de configurar su perfil de negocio, impidiendo que puedan pasar el onboarding por tanto acceder a la funcionalidad principal de la plataforma.</li>
+                    <li className="text-sm leading-relaxed text-foreground">Debido a la audiencia objetiva de la plataforma, que son dueños de negocios con poco tiempo y con conocimientos básicos. Muchos no tenían redes sociales, por tanto no se podían obtener los datos de su negocio.</li>
+                    <li className="text-sm leading-relaxed text-foreground">Otros usuarios que si contaban con redes sociales, no tenían inisiado sesión con sus redes sociales, por tanto debían buscar o recordad sus credenciales para poder iniciar sesión. Lo cuál era demoroso y muchos no lo hacían.</li>
+                    <li className="text-sm leading-relaxed text-foreground">Otros no contaban con el suficiente contenido en sus redes sociales, por tanto la IA no podía obtener los datos suficientes para poder crear una idea de la marca.</li>
+                    <li className="text-sm leading-relaxed text-foreground">En la identificación de la competencia, los usuarios no sabían que poner en el campo de URL de la competencia. Les causaba confusión y no sabían que poner.</li>
+                  </ul>
+                </p>
+              </div>
+
+              {/* Iteraciones */}
+              <div className="mt-10 space-y-12">
+                {/* Iteración 1 */}
+                <div>
+                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    <span className="h-6 w-px bg-slate-200" />
+                    <span>Iteración 1</span>
+                  </div>
+                  <div className="mt-4 grid gap-8 lg:grid-cols-2">
+                    <div className="rounded-2xl border  bg-muted p-px">
+                      <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                        <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                        <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                        <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                        <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                          v2
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-center  aspect-ratio-1">
+                        <ImageCarousel
+                          images={[
+                            { src: "/images/case1/onboard_1_1.svg", alt: "Pantalla 1" },
+                            { src: "/images/case1/onboarding_2.svg", alt: "Pantalla 2" },
+                            { src: "/images/case1/onboarding_3.svg", alt: "Pantalla 3" },
+                          ]}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <div className="flex flex-wrap gap-3">
+                        <span className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                          Propuesta de solución
+                        </span>
+                        <p className="text-sm leading-relaxed text-foreground">
+                          Se considero las observaciones de los usuarios y se rediseñó el primer paso del onboarding. Se intento que el usuario ya no inicie sesión con sus redes sociales, si no que ingrese la URL de su negocio o de su competencia. Para asi poder obtener los datos de su negocio y de su competencia.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-3">
+                        <span className="inline-flex w-fit items-center rounded-full bg-[#fef3c6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-900">
+                          Problemas encontrados
+                        </span>
+                        <p className="text-sm leading-relaxed text-foreground">
+                          Este cambio no fue bien recibido por los usuarios, ya que les causaba confusion el campo de URL de su negocio y el de la competencia. Además volvimos al problema de ser un proceso engorroso y largo.
+                          Al tener que buscar la URL de su negocio y el de su competencia, muchos usuarios no lo hacían.                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                {/* Iteración 2 */}
+                <div>
+                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    <span className="h-6 w-px bg-slate-200" />
+                    <span>Iteración 2</span>
+                  </div>
+                  <div className="mt-4 grid gap-8 lg:grid-cols-2">
+                    <div className="rounded-2xl border  bg-muted p-px">
+                      <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                        <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                        <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                        <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                        <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                          v3 — Final
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-center  aspect-ratio-1">
+                        <ImageCarousel
+                          images={[
+                            { src: "/images/case1/onboard_1_2.svg", alt: "Pantalla 1" },
+                            { src: "/images/case1/onboard_2_2.svg", alt: "Pantalla 2" },
+                          ]}
+                        />
+
+
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <div className="flex flex-wrap gap-3">
+                        <span className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                          Solución final
+                        </span>
+                        <p className="text-sm leading-relaxed text-foreground">
+                          Se volvió a plantear otra solución, esta vez se opto por inckuir un buscador de páginas, para que el usuario pueda buscar la página de su negocio y agregarla facilmente. Esta solución fue bien recibida por los usuarios, ya que les permitía obtener los datos de su negocio de manera rápida y eficiente. Sin tener que salir de la plataforma para obtener los datos de su negocio.
+                          Además se redujo a 2 pasos el onboarding, para que el usuario pueda obtener los datos de su negocio de manera más rápida y la sección de comptidores se agrego como un dato más a revisar inferido por la IA.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-3">
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-primary">
+                          Por revisar
+                        </span>
+                        <p className="text-sm leading-relaxed text-foreground">
+                          A pesar de que esta solución menoró las fricciones y logro que muchos usuario avanzaran en el onboarding, surgió el problema de que algunas páginas no se encontraban el buscador, por lo que los usuarios tenían que ingresar los datos de su negocio de manera manual con el URL. Sin embargo se considero que esta solución era la mejor opción, debido a la tasa de usuario que avanzaban a comparación de los otros métodos.
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Tiempo – Iteraciones (Figma section) */}
             <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground dark:bg-card">
               {/* Header */}
@@ -329,14 +530,16 @@ export default function TokinAiCaseStudy() {
                       <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                       <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                     </div>
-                    <div className="flex items-center justify-center  aspect-ratio-1">
-                      <Image
-                        src="/images/case1/create_strategy_1.png"
-                        alt="Pantalla 2"
-                        width={1000}
-                        height={1000}
-                        className="rounded-bl-2xl rounded-br-2xl"
-                      />
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/create_strategy_1.png"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl object-cover"
+                        />
+                      </ImageZoom>
                     </div>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground">
@@ -354,14 +557,16 @@ export default function TokinAiCaseStudy() {
                       <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                       <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                     </div>
-                    <div className="flex items-center justify-center  aspect-ratio-1">
-                      <Image
-                        src="/images/case1/modal_detail_1.png"
-                        alt="Pantalla 2"
-                        width={1000}
-                        height={1000}
-                        className="rounded-bl-2xl rounded-br-2xl"
-                      />
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/modal_detail_1.png"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl object-cover"
+                        />
+                      </ImageZoom>
                     </div>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground">
@@ -378,14 +583,16 @@ export default function TokinAiCaseStudy() {
                       <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                       <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                     </div>
-                    <div className="flex items-center justify-center aspect-ratio-1">
-                      <Image
-                        src="/images/case1/calendar_table_1.png"
-                        alt="Pantalla 2"
-                        width={1000}
-                        height={1000}
-                        className="rounded-bl-2xl rounded-br-2xl"
-                      />
+                    <div className="flex items-center justify-center h-[210px] overflow-hidden">
+                      <ImageZoom>
+                        <Image
+                          src="/images/case1/calendar_table_1.png"
+                          alt="Pantalla 2"
+                          width={1000}
+                          height={1000}
+                          className="rounded-bl-2xl rounded-br-2xl object-cover"
+                        />
+                      </ImageZoom>
                     </div>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground">
@@ -471,202 +678,12 @@ export default function TokinAiCaseStudy() {
               </div>
             </div>
 
-            {/* Personalizacion – Iteraciones (Figma section) */}
-            <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground dark:bg-card">
-              {/* Header */}
-              <div className="flex items-center gap-3">
-                <Clock className="h-6 w-6 text-primary" />
-                <h4 className="text-2xl font-bold text-primary">Personalización de contenido</h4>
-              </div>
-              <p className="mt-4 max-w-3xl text-sm text-foreground md:text-base">
-                A partir de los datos recopilados, identificamos problemas clave y propusimos soluciones iterativas para mejorar la experiencia.
-              </p>
 
-              {/* Screens row */}
-              <div className="mt-10 grid gap-8 md:grid-cols-3">
-                {/* Pantalla 1 */}
-                <div className="flex flex-col gap-3">
-                  <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-px">
-                    <div className="flex items-center gap-2 border-b border-slate-700 px-3 py-2">
-                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
-                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
-                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
-                    </div>
-                    <div className="flex items-center justify-center py-24">
-                      <p className="text-xs text-slate-500">[ Pantalla 1 ]</p>
-                    </div>
-                  </div>
-                  <p className="text-sm leading-relaxed text-foreground">
-                    Pantalla de inicio donde el usuario selecciona su tipo de negocio y nicho para que la IA
-                    contextualice el contenido desde el primer momento.
-                  </p>
-                </div>
-
-                {/* Pantalla 2 */}
-                <div className="flex flex-col gap-3">
-                  <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-px">
-                    <div className="flex items-center gap-2 border-b border-slate-700 px-3 py-2">
-                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
-                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
-                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
-                    </div>
-                    <div className="flex items-center justify-center py-24">
-                      <p className="text-xs text-slate-500">[ Pantalla 2 ]</p>
-                    </div>
-                  </div>
-                  <p className="text-sm leading-relaxed text-foreground">
-                    Generador de contenido rápido: el usuario describe su producto en una frase y la IA propone
-                    tres variantes de publicación listas para usar.
-                  </p>
-                </div>
-
-                {/* Pantalla 3 */}
-                <div className="flex flex-col gap-3">
-                  <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-px">
-                    <div className="flex items-center gap-2 border-b border-slate-700 px-3 py-2">
-                      <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
-                      <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
-                      <span className="h-2 w-2 rounded-full bg-[#05df72]" />
-                    </div>
-                    <div className="flex items-center justify-center py-24">
-                      <p className="text-xs text-slate-500">[ Pantalla 3 ]</p>
-                    </div>
-                  </div>
-                  <p className="text-sm leading-relaxed text-foreground">
-                    Calendario de publicaciones automático: el sistema recomienda los mejores horarios por red
-                    social y agenda el contenido aprobado sin intervención manual.
-                  </p>
-                </div>
-              </div>
-
-              {/* Hallazgo */}
-              <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
-                <span className="inline-flex w-fit items-center rounded-full bg-[#fef3c6] px-6 py-1 text-xl font-semibold uppercase tracking-[0.12em] text-[#bb4d00]">
-                  Hallazgo
-                </span>
-                <p className="max-w-3xl text-sm leading-relaxed text-foreground">
-                  En las pruebas iniciales se detectó que el flujo de onboarding era demasiado extenso. Los
-                  usuarios abandonaban antes de configurar su perfil de negocio, impidiendo que la IA
-                  personalizara el contenido correctamente.
-                </p>
-              </div>
-
-              {/* Iteraciones */}
-              <div className="mt-10 space-y-12">
-                {/* Iteración 1 */}
-                <div>
-                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
-                    <span className="h-6 w-px bg-slate-200" />
-                    <span>Iteración 1</span>
-                  </div>
-                  <div className="mt-4 grid gap-8 lg:grid-cols-2">
-                    <div className="rounded-2xl border border-cyan-500/30 bg-slate-800/60 p-px">
-                      <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
-                        <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
-                        <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
-                        <span className="h-2 w-2 rounded-full bg-[#05df72]" />
-                        <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
-                          v2
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-center py-20">
-                        <p className="text-xs text-slate-500">[ Pantalla rediseñada → v2 ]</p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                      <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex w-fit items-center rounded-full bg-slate-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-900">
-                          Solución propuesta
-                        </span>
-                        <p className="text-sm leading-relaxed text-slate-200">
-                          Se rediseñó el onboarding en un flujo progresivo de 3 pasos, aplazando la configuración
-                          avanzada. Un asistente de IA sugiere el primer contenido en menos de 60 segundos,
-                          reduciendo la fricción y aumentando la tasa de activación.
-                        </p>
-                      </div>
-                      <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex w-fit items-center rounded-full bg-[#fef3c6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-slate-900">
-                          Problemas encontrados
-                        </span>
-                        <p className="text-sm leading-relaxed text-slate-200">
-                          Se rediseñó el onboarding en un flujo progresivo de 3 pasos, aplazando la configuración
-                          avanzada. Un asistente de IA sugiere el primer contenido en menos de 60 segundos,
-                          reduciendo la fricción y aumentando la tasa de activación.
-                        </p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-                {/* Iteración 2 */}
-                <div>
-                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
-                    <span className="h-6 w-px bg-slate-200" />
-                    <span>Iteración 2</span>
-                  </div>
-                  <div className="mt-4 grid gap-8 lg:grid-cols-2">
-                    <div className="rounded-2xl border border-cyan-500/30 bg-slate-800/60 p-px">
-                      <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
-                        <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
-                        <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
-                        <span className="h-2 w-2 rounded-full bg-[#05df72]" />
-                        <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
-                          v3 — Final
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-center py-20">
-                        <p className="text-xs text-slate-500">[ Pantalla final — v3 ]</p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                      <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
-                          Solución final
-                        </span>
-                        <p className="text-sm leading-relaxed text-slate-200">
-                          Se rediseñó el onboarding en un flujo progresivo de 3 pasos, aplazando la configuración
-                          avanzada. Un asistente de IA sugiere el primer contenido en menos de 60 segundos,
-                          reduciendo la fricción y aumentando la tasa de activación.
-                        </p>
-                      </div>
-                      <div className="flex flex-wrap gap-3">
-                        <span className="inline-flex w-fit items-center rounded-full bg-primary/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-primary">
-                          Por revisar
-                        </span>
-                        <p className="text-sm leading-relaxed text-slate-200">
-                          Se rediseñó el onboarding en un flujo progresivo de 3 pasos, aplazando la configuración
-                          avanzada. Un asistente de IA sugiere el primer contenido en menos de 60 segundos,
-                          reduciendo la fricción y aumentando la tasa de activación.
-                        </p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <h3 className="my-12 text-2xl font-bold text-black dark:text-white">Solución final</h3>
 
-            {/* Wireframes Grid */}
-            <div className="grid gap-6 md:grid-cols-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="rounded-lg bg-gray-100 p-4 dark:bg-gray-900">
-                  <div className="aspect-video rounded bg-white dark:bg-gray-800">
-                    <div className="flex h-full flex-col">
-                      <div className="h-8 rounded-t-lg bg-gray-200 dark:bg-gray-700"></div>
-                      <div className="flex flex-1">
-                        <div className="w-1/4 bg-gray-50 dark:bg-gray-900"></div>
-                        <div className="flex-1 bg-white dark:bg-gray-800"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=3941-17896&p=f&t=1RbZBHKhq3sUqgcm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3941%3A17896" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md mr-4">🖥️ View Prototype Web</a>
+            <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=7200-32003&p=f&t=40mXqEGLx8CIKq32-1&scaling=scale-down&content-scaling=fixed&page-id=6372%3A22434&starting-point-node-id=7200%3A32003&show-proto-sidebar=1" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md">📱 View Prototype Mobile</a>
           </div>
         </div>
 
