@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageZoom } from "./kibo-ui/image-zoom";
+import { Compare } from "./ui/compare";
 
-export function ImageCarousel({ images }: { images: { src: string; alt: string }[] }) {
+export function ImageCarousel({ images, compare }: { images: { src: string; alt: string }[]; compare?: boolean }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const next = () => setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -15,7 +16,7 @@ export function ImageCarousel({ images }: { images: { src: string; alt: string }
         <div>
             <div className="relative group w-full flex items-center justify-center">
                 <div className="w-full relative">
-                    {images.map((img, index) => (
+                    {!compare ? images.map((img, index) => (
                         <div
                             key={index}
                             className={`h-[310px] overflow-hidden transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 block" : "opacity-0 hidden"
@@ -31,7 +32,16 @@ export function ImageCarousel({ images }: { images: { src: string; alt: string }
                                 />
                             </ImageZoom>
                         </div>
-                    ))}
+                    )) : (
+                        <Compare
+                            firstImage={images[0].src}
+                            secondImage={images[1].src}
+                            firstImageClassName="object-cover object-left-top"
+                            secondImageClassname="object-cover object-left-top"
+                            className="h-[250px] w-[200px] md:h-[500px] md:w-[500px]"
+                            slideMode="hover"
+                        />
+                    )}
                 </div>
 
                 {images.length > 1 && (
