@@ -279,6 +279,143 @@ export default function TokinAiCaseStudy() {
         </div>
       </section>
 
+      {/* User Personas Section */}
+      <section className="mx-auto w-full max-w-6xl px-8 py-8">
+        <h3 className="mb-2 text-2xl font-bold text-black dark:text-white">User Personas</h3>
+        <p className="mb-8 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          A partir de la investigación, definimos tres perfiles de usuarios que representan el espectro de necesidades de TokinAi.
+        </p>
+        <div className="grid gap-6 md:grid-cols-3">
+
+          {/* Persona 1: Emprendedor sin tiempo ni conocimiento */}
+          <div className="rounded-xl border bg-card p-6 flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-primary font-bold text-lg shrink-0">
+                CH
+              </div>
+              <div>
+                <p className="font-semibold text-black dark:text-white">Carlos Herrera</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Dueño de negocio · 35 años</p>
+              </div>
+            </div>
+            <p className="text-sm italic text-gray-500 dark:text-gray-400 border-l-2 border-primary pl-3 leading-relaxed">
+              "Sé que necesito publicar más, pero entre atender mi negocio y todo lo demás, simplemente no tengo tiempo."
+            </p>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Objetivos</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Ganar visibilidad sin invertir horas en redes
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Atraer nuevos clientes con contenido profesional
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Frustraciones</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  No sabe qué publicar ni cuándo
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  Teme verse poco profesional en redes
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Persona 2: Community Manager buscando ideas */}
+          <div className="rounded-xl border bg-card p-6 flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center text-violet-500 dark:text-violet-300 font-bold text-lg shrink-0">
+                VT
+              </div>
+              <div>
+                <p className="font-semibold text-black dark:text-white">Valentina Torres</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Community Manager · 27 años</p>
+              </div>
+            </div>
+            <p className="text-sm italic text-gray-500 dark:text-gray-400 border-l-2 border-primary pl-3 leading-relaxed">
+              "Manejo varias marcas a la vez y siempre necesito ideas frescas. Es agotador reinventarse cada semana."
+            </p>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Objetivos</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Generar ideas de contenido para múltiples clientes
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Mantener la voz y consistencia de cada marca
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Frustraciones</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  Agotamiento creativo al gestionar varias cuentas
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  Herramientas genéricas que no respetan el tono de marca
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Persona 3: Emprendedora digital - simple y minimalista */}
+          <div className="rounded-xl border bg-card p-6 flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center text-emerald-600 dark:text-emerald-300 font-bold text-lg shrink-0">
+                SM
+              </div>
+              <div>
+                <p className="font-semibold text-black dark:text-white">Sofía Mora</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Emprendedora digital · 24 años</p>
+              </div>
+            </div>
+            <p className="text-sm italic text-gray-500 dark:text-gray-400 border-l-2 border-primary pl-3 leading-relaxed">
+              "Tengo las ideas, pero necesito ayuda para transformarlas en publicaciones que realmente conecten."
+            </p>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Objetivos</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Construir audiencia orgánica desde cero
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <Check size={14} className="mt-0.5 text-green-500 shrink-0" />
+                  Monetizar su marca personal con contenido de valor
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Frustraciones</p>
+              <ul className="space-y-1.5">
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  No sabe adaptar contenido a distintas plataformas
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <X size={14} className="mt-0.5 text-red-400 shrink-0" />
+                  Baja consistencia por falta de estructura
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Design Section */}
       <TitleLine numero={3} titulo={"Diseño"} />
       <section className="mx-auto w-full max-w-6xl px-8 py-8">

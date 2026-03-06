@@ -11,8 +11,8 @@ export default function CardHome({ project, index }: { project: any, index: any 
 
     return (
         <div className="md:grid  md:grid-cols-8 md:gap-16 ">
-            <div className={`mb-4 overflow-hidden rounded-lg  md:col-span-5 h-96 ${index === 1 ? "order-2" : "order-1"}`}>
-                <div className="relative aspect-video ">
+            <div className={`mb-4 overflow-hidden rounded-lg  md:col-span-5 h-96 ${index === 1 ? "order-2" : "order-1"} hidden md:block`}>
+                <div className="relative aspect-video  ">
                     {/* Placeholder for project image */}
                     <ImageZoom  >
                         <Image
@@ -34,6 +34,20 @@ export default function CardHome({ project, index }: { project: any, index: any 
                         </span>
                     })}
 
+                </div>
+                <div className={`mb-4 overflow-hidden rounded-lg  md:col-span-5 md:h-96 h-auto ${index === 1 ? "order-2" : "order-1"} block md:hidden`}>
+                    <div className="relative aspect-video  ">
+                        {/* Placeholder for project image */}
+                        <ImageZoom  >
+                            <Image
+                                width={1000}
+                                height={1000}
+                                src={project.imagen1}
+                                alt="Placeholder image case study"
+
+                            />
+                        </ImageZoom>
+                    </div>
                 </div>
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                     {project.descripcion}

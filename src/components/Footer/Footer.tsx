@@ -7,7 +7,7 @@ export default function Footer() {
             <section id="contacto" className="mx-auto w-full max-w-6xl px-8 py-16">
                 <div className="mb-12 text-center">
                     <div className="relative">
-                        <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
+                        <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 md:text-6xl text-4xl font-light text-gray-300 opacity-30 dark:text-gray-700">
                             &lt;CONTACTO/&gt;
                         </span>
                         <h2 className="relative text-4xl font-bold text-black dark:text-white">CONTACTO</h2>
