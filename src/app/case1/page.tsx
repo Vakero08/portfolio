@@ -528,14 +528,15 @@ export default function TokinAiCaseStudy() {
                 </span>
                 <p className="max-w-3xl text-sm leading-relaxed text-foreground">
                   En las pruebas iniciales se detectó los siguientes incovenientes:
-                  <ul className="list-disc list-inside">
-                    <li className="text-sm leading-relaxed text-foreground">El flujo de onboarding era demasiado extenso. Los usuarios abandonaban antes de configurar su perfil de negocio, impidiendo que puedan pasar el onboarding por tanto acceder a la funcionalidad principal de la plataforma.</li>
-                    <li className="text-sm leading-relaxed text-foreground">Debido a la audiencia objetiva de la plataforma, que son dueños de negocios con poco tiempo y con conocimientos básicos. Muchos no tenían redes sociales, por tanto no se podían obtener los datos de su negocio.</li>
-                    <li className="text-sm leading-relaxed text-foreground">Otros usuarios que si contaban con redes sociales, no tenían inisiado sesión con sus redes sociales, por tanto debían buscar o recordad sus credenciales para poder iniciar sesión. Lo cuál era demoroso y muchos no lo hacían.</li>
-                    <li className="text-sm leading-relaxed text-foreground">Otros no contaban con el suficiente contenido en sus redes sociales, por tanto la IA no podía obtener los datos suficientes para poder crear una idea de la marca.</li>
-                    <li className="text-sm leading-relaxed text-foreground">En la identificación de la competencia, los usuarios no sabían que poner en el campo de URL de la competencia. Les causaba confusión y no sabían que poner.</li>
-                  </ul>
+
                 </p>
+                <ul className="list-disc list-inside">
+                  <li className="text-sm leading-relaxed text-foreground">El flujo de onboarding era demasiado extenso. Los usuarios abandonaban antes de configurar su perfil de negocio, impidiendo que puedan pasar el onboarding por tanto acceder a la funcionalidad principal de la plataforma.</li>
+                  <li className="text-sm leading-relaxed text-foreground">Debido a la audiencia objetiva de la plataforma, que son dueños de negocios con poco tiempo y con conocimientos básicos. Muchos no tenían redes sociales, por tanto no se podían obtener los datos de su negocio.</li>
+                  <li className="text-sm leading-relaxed text-foreground">Otros usuarios que si contaban con redes sociales, no tenían inisiado sesión con sus redes sociales, por tanto debían buscar o recordad sus credenciales para poder iniciar sesión. Lo cuál era demoroso y muchos no lo hacían.</li>
+                  <li className="text-sm leading-relaxed text-foreground">Otros no contaban con el suficiente contenido en sus redes sociales, por tanto la IA no podía obtener los datos suficientes para poder crear una idea de la marca.</li>
+                  <li className="text-sm leading-relaxed text-foreground">En la identificación de la competencia, los usuarios no sabían que poner en el campo de URL de la competencia. Les causaba confusión y no sabían que poner.</li>
+                </ul>
               </div>
 
               {/* Iteraciones */}

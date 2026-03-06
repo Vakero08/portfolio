@@ -13,25 +13,23 @@ export default function ScanAudienceCaseStudy() {
     <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
 
       {/* Hero Section */}
-      {/* Hero Section */}
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           Caso de estudio: Rediseño Parcial
         </div>
-        <div className="flex flex-rows gap-4">
-          <div className="flex-1">
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
-              Scan Audience
-            </h1>
-            <div className="space-y-8">
-              <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
-                Scan Audience es una herramienta avanzada diseñada para evaluar el rendimiento de su marca y realizar comparaciones con otras marcas en el mercado.
-              </p>
-              <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
-                La plataforma presentaba fricción en puntos importantes, no comunicaban claramente el valor del producto ni guiaban al usuario hacia las acciones principales.
-              </p>
+        <h1 className="mb-6 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+          Scan Audience
+        </h1>
+        <div className="grid gap-12 lg:grid-cols-2">
 
-            </div>
+          <div className="space-y-8">
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
+              Scan Audience es una herramienta avanzada diseñada para evaluar el rendimiento de su marca y realizar comparaciones con otras marcas en el mercado.
+            </p>
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
+              La plataforma presentaba fricción en puntos importantes, no comunicaban claramente el valor del producto ni guiaban al usuario hacia las acciones principales.
+            </p>
+
           </div>
           {/* Right Column - Device Mockups */}
           <div className="flex items-center justify-center flex-1">
@@ -154,7 +152,7 @@ export default function ScanAudienceCaseStudy() {
           {/* Perfil del usuario + CSAT */}
           <div className="grid gap-6 md:grid-cols-2">
             {/* Perfil */}
-            <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-900">
+            <div className="w-full rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-900">
               <h4 className="mb-4 text-base font-semibold text-black dark:text-white">Perfil del usuario</h4>
               <div className="space-y-3">
                 {[
@@ -163,7 +161,7 @@ export default function ScanAudienceCaseStudy() {
                   { rol: "Analistas de Datos", pct: 22 },
                 ].map(({ rol, pct }) => (
                   <div key={rol}>
-                    <div className="mb-1 flex justify-between text-sm text-neutral-700 dark:text-neutral-300">
+                    <div className="mb-3 flex justify-between text-sm text-neutral-700 dark:text-neutral-300">
                       <span>{rol}</span>
                       <span className="font-medium text-black dark:text-white">{pct}%</span>
                     </div>
@@ -179,30 +177,31 @@ export default function ScanAudienceCaseStudy() {
             </div>
 
             {/* CSAT */}
-            <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-900">
-              <h4 className="mb-4 text-base font-semibold text-black dark:text-white">Satisfacción general (CSAT)</h4>
-              <div className="flex items-end justify-between gap-6">
-                <div>
-                  <p className="text-5xl font-bold text-[#03AADD]">62%</p>
-                  <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">"Satisfecho" o "Muy Satisfecho"</p>
+            <div className=" w-100% rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-900">
+              <h4 className="mb-4 text-base font-semibold text-black dark:text-white">Satisfacción general</h4>
+              <div className="flex justify-between gap-6 w-full ">
+                <div >
+                  <p className="text-2xl md:text-5xl font-bold text-[#03AADD]">62%</p>
+                  <p className="mt-1 text-sm hidden sm:block text-neutral-500 dark:text-neutral-400">"Satisfecho" o "Muy Satisfecho"</p>
+                  <p className="mt-1 text-sm sm:hidden block text-neutral-500 dark:text-neutral-400">"Satisfecho"</p>
                 </div>
-                <div className="text-right">
+                <div className="text-left md:text-right">
                   <p className="text-3xl font-bold text-amber-500">28%</p>
                   <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">Neutros</p>
                 </div>
-                <div className="text-right">
+                <div className="text-right hidden sm:block">
                   <p className="text-3xl font-bold text-neutral-500">10%</p>
                   <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">Insatisfechos</p>
                 </div>
               </div>
-              <div className="mt-5 h-3 w-full overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-800">
+              <div className="mt-5 h-3 w- overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-800">
                 <div className="flex h-full">
                   <div className="h-full bg-[#03AADD]" style={{ width: "62%" }} />
                   <div className="h-full bg-amber-400" style={{ width: "28%" }} />
                   <div className="h-full bg-neutral-300 dark:bg-neutral-600" style={{ width: "10%" }} />
                 </div>
               </div>
-              <div className="mt-2 flex gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+              <div className="mt-2 flex flex-col sm:flex-row gap-4 text-xs text-neutral-500 dark:text-neutral-400">
                 <span className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-[#03AADD]" />Satisfecho</span>
                 <span className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-amber-400" />Neutral</span>
                 <span className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-neutral-300 dark:bg-neutral-600" />Insatisfecho</span>
@@ -783,7 +782,7 @@ export default function ScanAudienceCaseStudy() {
                     Añadir páginas
                   </span>
                 </div>
-                <div className="flex items-center justify-center  aspect-ratio-1">
+                <div className="flex items-center justify-center  aspect-video">
                   <ImageZoom>
                     <Image
                       width={1000}
@@ -834,7 +833,7 @@ export default function ScanAudienceCaseStudy() {
               La creación de espacios era un proceso que requería de varios pasos, y que no era muy claro para el usuario. Primero el usuario tenia que ingresar páginas y en otro processo crear espacio  seleccionando las páginas que quiere monitorear.
             </p>
             <div className="mt-4 grid gap-8 lg:grid-cols-2">
-              <div className="rounded-2xl border  bg-muted p-px">
+              <div className="rounded-2xl border  bg-muted p-px h-auto">
                 <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
                   <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
@@ -843,7 +842,7 @@ export default function ScanAudienceCaseStudy() {
                     Creación de espacios
                   </span>
                 </div>
-                <div className="flex items-start justify-center h-[410] overflow-hidden">
+                <div className="flex items-start justify-center overflow-hidden">
                   <ImageZoom>
                     <Image
                       src="/images/case3/create-new.svg"
@@ -891,7 +890,7 @@ export default function ScanAudienceCaseStudy() {
           </div>
           {/* Tablero */}
           <div className="bg-card p-8 rounded-md border my-16">
-            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">Tablero/Comparativa</h3>
+            <h3 className="mb-6 md:text-2xl text-lg font-bold text-black dark:text-white ">Tablero/Comparativa</h3>
             <div className="mt-4 grid gap-8 lg:grid-cols-2">
               <div className="rounded-2xl border  bg-muted p-px">
                 <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
@@ -1002,13 +1001,13 @@ export default function ScanAudienceCaseStudy() {
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="text-center mb-16">
           <div className="relative">
-            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
+            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 md:text-6xl text-md font-light text-gray-300 opacity-30 dark:text-gray-700">
               &lt;Más proyectos/&gt;
             </span>
             <h2 className="relative text-4xl font-bold text-black dark:text-white">Más proyectos</h2>
           </div>
         </div>
-        <div className="flex gap-16">
+        <div className="flex gap-16 flex-col md:flex-row w-full">
           <CardHorizontalDemo project={projects[0]} index="1" />
           <CardHorizontalDemo project={projects[1]} index="2" />
         </div>
