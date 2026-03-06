@@ -1,6 +1,7 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
+import { TitleLine } from "@/components/TitleLine";
 import { projects } from "@/resources/content";
 import { ArrowUp, Check, Info, LoaderPinwheel, Scan, Workflow } from "lucide-react";
 import Image from "next/image";
@@ -8,29 +9,30 @@ import Link from "next/link";
 
 export default function SocialAlertCaseStudy() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
+    <div className="flex min-h-screen flex-col bg-white  dark:bg-neutral-950 mt-[84px]">
 
       {/* Hero Section */}
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           Caso de estudio: Rediseño de una aplicación Web
         </div>
-        <div className="flex flex-rows gap-4">
-          <div className="flex-1">
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
-              Social Alert
-            </h1>
-            <div className="">
-              <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
-                Social Alert es una herramienta de escucha y monitoreo de redes sociales, para gestión y alerta temprana
-                de crisis. Identificando comentarios, palabras y patrones negativos o positivos para así prevenir crisis
-                o actuar a tiempo.
-              </p>
+        <h1 className="mb-6 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+          Social Alert
+        </h1>
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300 mb-6">
+              Social Alert es una herramienta de escucha y monitoreo de redes sociales, para gestión y alerta temprana
+              de crisis. Identificando comentarios, palabras y patrones negativos o positivos para así prevenir crisis
+              o actuar a tiempo.
+            </p>
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
+              El proyecto requiere un rediseño completo de la aplicación web, para estar alineado a los nuevos objetivos de negocio.
+            </p>
 
-            </div>
           </div>
           {/* Right Column - Device Mockups */}
-          <div className="flex items-center justify-center flex-1">
+          <div className="flex items-center justify-center mb-6">
             <div className="relative aspect-video ">
               {/* Placeholder for project image */}
               <ImageZoom  >
@@ -66,10 +68,10 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* El Problema */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">El Problema</h2>
-          <p className="mb-4 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+          <TitleLine numero={1} titulo={"Problema"} />
+          <p className="my-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             La Plataforma Social Alert, presentaba diversos problemas de usabilidad que afectaban directamente la experiencia
             del usuario y la eficiencia del producto.
           </p>
@@ -97,8 +99,8 @@ export default function SocialAlertCaseStudy() {
       {/* Objetivos */}
       <section className="px-8 py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-8 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">Objetivos</h2>
-          <div className="grid gap-12 md:grid-cols-2">
+          <TitleLine numero={1} titulo={"Objetivos"} />
+          <div className="grid gap-12 md:grid-cols-2 my-8">
             <div>
               <h3 className="mb-4 text-xl font-bold text-black dark:text-white">Objetivos UX</h3>
               <ul className="space-y-3">
@@ -138,9 +140,9 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* User Research */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">User Research</h2>
+          <TitleLine numero={2} titulo={"User Research"} />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             Para entender mejor a los usuarios y el contexto del producto, se realizaron las siguientes actividades:
           </p>
@@ -319,7 +321,7 @@ export default function SocialAlertCaseStudy() {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[340px] overflow-hidden bg-background">
+                <div className="flex items-center justify-center h-[200px] md:h-[340px] overflow-hidden bg-background">
                   <ImageZoom>
                     <Image
                       src="/images/case2/query_heat.png"
@@ -347,7 +349,7 @@ export default function SocialAlertCaseStudy() {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[340px] overflow-hidden bg-background">
+                <div className="flex items-center justify-center h-[200px] md:h-[340px] overflow-hidden bg-background">
                   <ImageCarousel images={[{ src: "/images/case2/Dashboard_heat.png", alt: "Pantalla 2" }, { src: "/images/case2/dash_areamap.png", alt: "Pantalla 2" }]} />
 
                 </div>
@@ -424,10 +426,10 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* Diseño */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">Diseño</h2>
-          <p className="mb-12 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 ">
+          <TitleLine numero={3} titulo={"Diseño"} />
+          <p className="mb-12 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 my-8">
             Se trabajó mejorando los flujos más importantes, como el flujo de creación de consultas, tablero y alertas.</p>
           {/* Creación de consultas */}
           <div className="bg-card p-8 rounded-md border">
@@ -475,7 +477,7 @@ export default function SocialAlertCaseStudy() {
               </div>
             </div>
             <div className="mt-4 grid gap-8 lg:grid-cols-2">
-              <div className="rounded-2xl border  bg-muted p-px">
+              <div className="rounded-2xl border  bg-muted p-px h-fit">
                 <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
                   <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
@@ -484,13 +486,14 @@ export default function SocialAlertCaseStudy() {
                     Paso2
                   </span>
                 </div>
-                <div className="flex items-center justify-center  aspect-ratio-1">
+                <div className="flex items-center justify-center h-[200px] md:h-[310px] overflow-hidden">
                   <ImageZoom>
                     <Image
                       width={1000}
                       height={1000}
                       src={"/images/case2/Create-query-2.svg"}
                       alt="Placeholder image case study"
+                      className="rounded-bl-2xl rounded-br-2xl object-cover"
                     />
                   </ImageZoom>
                 </div>
@@ -541,7 +544,7 @@ export default function SocialAlertCaseStudy() {
             <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">Tablero</h3>
             <p className="mb-8">Para el trablero se optó por reducir la cantidad de información innecesaria y repetitiva y mostrar solo la información relevante, correctamente agrupada para el usuario.</p>
             <div className="mt-4 grid gap-8 lg:grid-cols-2">
-              <div className="rounded-2xl border  bg-muted p-px">
+              <div className="rounded-2xl border  bg-muted p-px h-fit">
                 <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
                   <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
@@ -550,7 +553,7 @@ export default function SocialAlertCaseStudy() {
                     Nuevo tablero
                   </span>
                 </div>
-                <div className="flex items-center justify-center  aspect-ratio-1">
+                <div className="flex items-center justify-center  h-[200px] md:h-[310px] overflow-hidden">
                   <ImageCarousel
                     images={[
                       { src: "/images/case2/dash_1.svg", alt: "Pantalla 1" },
@@ -598,7 +601,7 @@ export default function SocialAlertCaseStudy() {
           </div>
           {/* Creación de alertas */}
           <div className="bg-card p-8 rounded-md border my-16">
-            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">Creación de alertas</h3>
+            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">Configuración de alertas</h3>
             <p className="mb-8">Se separó el flujo de creación de alertas de la sección de configuración de consultas, para que el usuario pueda configurar la alerta de forma independiente y no mezclar los dos procesos.</p>
             <div className="mt-4 grid gap-8 lg:grid-cols-2">
               <div className="rounded-2xl border  bg-muted p-px">
@@ -610,7 +613,7 @@ export default function SocialAlertCaseStudy() {
                     Configuración de alertas
                   </span>
                 </div>
-                <div className="flex items-start justify-center h-[410] overflow-hidden">
+                <div className="flex items-start justify-center h-[200px] md:h-[410px] overflow-hidden">
                   <ImageZoom>
                     <Image
                       src="/images/case2/alerta_new.svg"
@@ -658,9 +661,9 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* Testing */}
-      <section className="px-8 py-16">
+      <section className="px-8 pb-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">Testing</h2>
+          <TitleLine numero={4} titulo={"Testing"} />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             Antes de la implementación en código, se realizaron instancias de validación:
           </p>
@@ -683,9 +686,9 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* Solución Final */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 pb-16 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">Resultados Finales</h2>
+          <TitleLine numero={5} titulo={"Resultados Finales"} />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             El resultado fue una nueva versión del producto con:
           </p>
@@ -714,9 +717,10 @@ export default function SocialAlertCaseStudy() {
       </section>
 
       {/* Aprendizajes */}
-      <section className="px-8 py-16">
+      <section className="px-8 pb-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">Aprendizajes</h2>
+          <TitleLine numero={5} titulo={"Aprendizajes"} />
+
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -749,13 +753,13 @@ export default function SocialAlertCaseStudy() {
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="text-center mb-16">
           <div className="relative">
-            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
+            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-md md:text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
               &lt;Más proyectos/&gt;
             </span>
             <h2 className="relative text-4xl font-bold text-black dark:text-white">Más proyectos</h2>
           </div>
         </div>
-        <div className="flex gap-16">
+        <div className="flex gap-16 flex-col md:flex-row w-full">
           <CardHorizontalDemo project={projects[0]} index="1" />
           <CardHorizontalDemo project={projects[2]} index="3" />
         </div>

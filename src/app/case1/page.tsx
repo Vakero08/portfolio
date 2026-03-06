@@ -1,26 +1,22 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
-import { Separator } from "@/components/ui/separator";
 import { projects } from "@/resources/content";
 import { Check, Clock, Delete, Dot, HelpCircle, IterationCcw, Repeat, Repeat1, Repeat1Icon, Repeat2, Repeat2Icon, SeparatorHorizontal, Settings, X } from "lucide-react";
 import Image from "next/image";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { TitleLine } from "@/components/TitleLine";
 
-export function TitleLine({ numero, titulo }: { numero: number, titulo: String }) {
-  return <div className="flex items-center  justify-center gap-4 max-w-6xl mx-auto w-full sm:mb-8 sm:mt-16 mb-4 mt-16 px-4">
-    <span className="text-primary flex-1">0{numero}</span><Separator className="flex-12 bg-slate-200 dark:bg-slate-700" /><span className="text-primary font-bold text-lg md:text-4xl flex-1">{titulo}</span>
-  </div>
-}
 
 export default function TokinAiCaseStudy() {
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-black mt-[84px]">
+    <div className="flex min-h-screen flex-col bg-white dark:bg-black mt-[84px]">
 
       {/* Hero Section */}
       <section className="mx-auto w-full max-w-6xl px-8 py-16 ">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           Caso de estudio: Creación de una aplicación Web/Móvil
         </div>
+
         <h1 className="mb-8 text-6xl font-bold text-black dark:text-white">
           TokinAi
         </h1>
