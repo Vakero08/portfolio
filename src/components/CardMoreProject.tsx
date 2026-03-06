@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function CardHorizontalDemo({ project, index }: { project: any, index: string }) {
     return (
-        <Card className='max-w-lg py-0 sm:flex-row sm:gap-0'>
+        <Card className='max-w-lg py-0 sm:flex-row sm:gap-0 w-full'>
             <CardContent className='grow-1 px-0'>
                 <Image
                     height={1000}

@@ -19,7 +19,7 @@ export function ImageCarousel({ images, compare }: { images: { src: string; alt:
                     {!compare ? images.map((img, index) => (
                         <div
                             key={index}
-                            className={`h-[310px] overflow-hidden transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 block" : "opacity-0 hidden"
+                            className={`h-full overflow-hidden transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 block" : "opacity-0 hidden"
                                 }`}
                         >
                             <ImageZoom>

@@ -7,8 +7,8 @@ import Image from "next/image";
 import { ImageCarousel } from "@/components/ImageCarousel";
 
 export function TitleLine({ numero, titulo }: { numero: number, titulo: String }) {
-  return <div className="flex items-center gap-4 max-w-6xl w-full mx-auto mb-8 mt-16">
-    <span className="text-primary">0{numero}</span><Separator className="bg-slate-200 dark:bg-slate-700" /><span className="text-primary font-bold text-4xl">{titulo}</span>
+  return <div className="flex items-center  justify-center gap-4 max-w-6xl mx-auto w-full sm:mb-8 sm:mt-16 mb-4 mt-16 px-4">
+    <span className="text-primary flex-1">0{numero}</span><Separator className="flex-12 bg-slate-200 dark:bg-slate-700" /><span className="text-primary font-bold text-lg md:text-4xl flex-1">{titulo}</span>
   </div>
 }
 
@@ -54,7 +54,7 @@ export default function TokinAiCaseStudy() {
         </div>
       </section>
       {/* Project Details */}
-      <div className="grid gap-6 md:grid-cols-3 w-full max-w-6xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-3 w-full max-w-6xl mx-auto xl:px-0 px-2">
         <div className="border p-4 rounded-md bg-card">
           <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">Rol</h3>
           <p className="text-base font-medium text-black dark:text-white">Lead UI/UX Designer</p>
@@ -174,66 +174,67 @@ export default function TokinAiCaseStudy() {
               <table className="min-w-full divide-y divide-gray-200 text-left text-sm dark:divide-gray-700">
                 <thead className="bg-card">
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
+                    <th scope="col" className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gray-600 sm:px-6 sm:py-3 sm:tracking-wider dark:text-gray-300">
                       Problema identificado
                     </th>
-                    <th scope="col" className="px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
-                      Emprendedores encuestados (80)
+                    <th scope="col" className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gray-600 sm:px-6 sm:py-3 sm:tracking-wider dark:text-gray-300">
+                      <span className="hidden sm:inline">Emprendedores encuestados (80)</span>
+                      <span className="sm:hidden">Encuestados</span>
                     </th>
-                    <th scope="col" className="px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">
-                      Porcentaje
+                    <th scope="col" className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gray-600 sm:px-6 sm:py-3 sm:tracking-wider dark:text-gray-300">
+                      %
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                   <tr>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       Falta de tiempo para publicar
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">69</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">86%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">69</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">86%</td>
                   </tr>
                   <tr className="bg-accent/60">
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       Falta de conocimiento en marketing digital
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">43</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">53%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">43</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">53%</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       No han usado herramientas de IA para crear contenido
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">46</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">58%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">46</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">58%</td>
                   </tr>
                   <tr className="bg-accent/60">
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       No tienen página web, ni redes sociales
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">32</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">40%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">32</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">40%</td>
                   </tr>
                   <tr className="bg-accent/60">
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       Publican de forma inconsistente
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">44</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">55%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">44</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">55%</td>
                   </tr>
                   <tr className="bg-accent/60">
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       No miden resultados ni métricas
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">67</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">83%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">67</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">83%</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">
                       No saben cómo hacer publicidad (ads)
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">62</td>
-                    <td className="px-6 py-4 text-sm text-gray-800 dark:text-gray-100">77%</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">62</td>
+                    <td className="px-3 py-3 text-xs text-gray-800 sm:px-6 sm:py-4 sm:text-sm dark:text-gray-100">77%</td>
                   </tr>
                 </tbody>
               </table>
@@ -435,7 +436,7 @@ export default function TokinAiCaseStudy() {
             <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground dark:bg-card">
               {/* Header */}
               <div className="flex items-center gap-3">
-                <Clock className="h-6 w-6 text-primary" />
+                <Settings className="h-6 w-6 text-primary" />
                 <h4 className="text-2xl font-bold text-primary">Personalización de contenido</h4>
               </div>
               <p className="mt-4 max-w-3xl text-sm text-foreground md:text-base">
@@ -550,7 +551,7 @@ export default function TokinAiCaseStudy() {
                     <span>Iteración 1</span>
                   </div>
                   <div className="mt-4 grid gap-8 lg:grid-cols-2">
-                    <div className="rounded-2xl border  bg-muted p-px">
+                    <div className="rounded-2xl border  bg-muted p-px h-auto">
                       <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
                         <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
                         <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
@@ -559,7 +560,7 @@ export default function TokinAiCaseStudy() {
                           v2
                         </span>
                       </div>
-                      <div className="flex items-center justify-center  aspect-ratio-1">
+                      <div className="flex items-center justify-center h-[210px] overflow-hidden sm:h-[350px]">
                         <ImageCarousel
                           images={[
                             { src: "/images/case1/onboard_1_1.svg", alt: "Pantalla 1" },
@@ -818,9 +819,10 @@ export default function TokinAiCaseStudy() {
 
 
             <h3 className="my-12 text-2xl font-bold text-black dark:text-white">Solución final</h3>
-
-            <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=3941-17896&p=f&t=1RbZBHKhq3sUqgcm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3941%3A17896" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md mr-4">🖥️ View Prototype Web</a>
-            <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=7200-32003&p=f&t=40mXqEGLx8CIKq32-1&scaling=scale-down&content-scaling=fixed&page-id=6372%3A22434&starting-point-node-id=7200%3A32003&show-proto-sidebar=1" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md">📱 View Prototype Mobile</a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=3941-17896&p=f&t=1RbZBHKhq3sUqgcm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3941%3A17896" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md mr-4 w-full md:w-auto">🖥️ View Prototype Web</a>
+              <a href="https://www.figma.com/proto/kRm6R7H7NojW4t6yBhXeC1/TokinAi?node-id=7200-32003&p=f&t=40mXqEGLx8CIKq32-1&scaling=scale-down&content-scaling=fixed&page-id=6372%3A22434&starting-point-node-id=7200%3A32003&show-proto-sidebar=1" target="_blank" className="bg-primary text-white px-4 py-2 rounded-md w-full md:w-auto">📱 View Prototype Mobile</a>
+            </div>
           </div>
         </div>
 
@@ -929,13 +931,13 @@ export default function TokinAiCaseStudy() {
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="text-center mb-16">
           <div className="relative">
-            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
+            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 md:text-6xl text-md font-light text-gray-300 opacity-30 dark:text-gray-700">
               &lt;Más proyectos/&gt;
             </span>
             <h2 className="relative text-4xl font-bold text-black dark:text-white">Más proyectos</h2>
           </div>
         </div>
-        <div className="flex gap-16">
+        <div className="flex gap-16 flex-col md:flex-row w-full">
           <CardHorizontalDemo project={projects[1]} index="2" />
           <CardHorizontalDemo project={projects[2]} index="3" />
         </div>
