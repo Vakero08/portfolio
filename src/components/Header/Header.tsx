@@ -34,11 +34,11 @@ export default function Header() {
         return () => { document.body.style.overflow = "" }
     }, [menuOpen])
 
-    const navLinks = [
+    const navLinks: { href: string; label: string; download?: string }[] = [
         { href: "/", label: "Inicio" },
         { href: "/about", label: "Sobre mí" },
         { href: "/#portafolio", label: "Portafolio" },
-        { href: "/cv", label: "CV" },
+        { href: "/CV-UXUI-2026.pdf", label: "CV", download: "CV-UXUI-2026.pdf" },
     ]
 
     return (
@@ -74,11 +74,12 @@ export default function Header() {
                     ) : (
                         // Desktop
                         <>
-                            <div className="flex gap-6 flex-1 justify-center text-xl">
+                            <div className="flex gap-20 flex-1 justify-center text-xl">
                                 {navLinks.map(link => (
                                     <Link
                                         key={link.href}
                                         href={link.href}
+                                        {...(link.download ? { download: link.download } : {})}
                                         className="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
                                     >
                                         {link.label}
@@ -124,6 +125,7 @@ export default function Header() {
                                 >
                                     <Link
                                         href={link.href}
+                                        {...(link.download ? { download: link.download } : {})}
                                         onClick={() => setMenuOpen(false)}
                                         className="text-4xl font-semibold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                     >
