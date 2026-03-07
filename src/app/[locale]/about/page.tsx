@@ -47,6 +47,8 @@ const fadeUp = {
 }
 
 export default function AboutPage() {
+
+    // Enable static rendering
     return (
         <div className="flex min-h-screen flex-col bg-white dark:bg-black mt-[84px]">
 

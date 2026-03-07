@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -7,24 +6,34 @@ import { quick } from '@/app/ui/fonts';
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-export const metadata: Metadata = {
-  title: "Jhonatan Duran - Diseñador UX/UI",
-  description: "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend",
-};
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children, params
 }: Props) {
   const { locale } = await params
   if (!hasLocale(routing.locales, locale)) return notFound();
+  setRequestLocale(locale);
+
   return (
     <html lang={locale}>
       <head>

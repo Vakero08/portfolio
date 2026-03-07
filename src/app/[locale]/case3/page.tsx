@@ -3,12 +3,18 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { projects } from "@/resources/content";
 import { Check, Info, Scan, Workflow } from "lucide-react";
+import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { use } from "react";
 
-const SECTION_BLUE = "text-blue-600 dark:text-blue-400";
+type Props = {
+  params: Promise<{ locale: string }>;
+}
+export default function ScanAudienceCaseStudy({ params }: Props) {
+  const { locale } = use(params);
 
-export default function ScanAudienceCaseStudy() {
+  // Enable static rendering
+  setRequestLocale(locale);
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
 

@@ -5,9 +5,17 @@ import { Check, Clock, Delete, Dot, HelpCircle, IterationCcw, Repeat, Repeat1, R
 import Image from "next/image";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { TitleLine } from "@/components/TitleLine";
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 
+type Props = {
+  params: Promise<{ locale: string }>;
+}
+export default function TokinAiCaseStudy({ params }: Props) {
+  const { locale } = use(params);
 
-export default function TokinAiCaseStudy() {
+  // Enable static rendering
+  setRequestLocale(locale);
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-black mt-[84px]">
 
@@ -791,13 +799,14 @@ export default function TokinAiCaseStudy() {
                         </span>
                         <p className="text-sm leading-relaxed text-foreground">
                           Se rediseñó el flujo de creación de estrategias de contenido para solventar los hallazgos entontrados:
-                          <ul className="list-disc list-inside">
-                            <li>Se simplificó el flujo de creación de estrategias de contenido, presentando al usuario un solo input donde podia ingresar el objetivo de la estrategia, que es el campo que más editaba el usuario.</li>
-                            <li>Los campos para el tono de contenido, hashtags o fecha de publicación se colocaron con menos jerarquia para no abrumar al usuario.</li>
-                            <li>Se eliminó el modal de revisión de contenido, cambiandolo por un resumen de la estrategia de contenido con la información más separada y ordenada.</li>
-                          </ul>
-
                         </p>
+                        <ul className="list-disc list-inside">
+                          <li>Se simplificó el flujo de creación de estrategias de contenido, presentando al usuario un solo input donde podia ingresar el objetivo de la estrategia, que es el campo que más editaba el usuario.</li>
+                          <li>Los campos para el tono de contenido, hashtags o fecha de publicación se colocaron con menos jerarquia para no abrumar al usuario.</li>
+                          <li>Se eliminó el modal de revisión de contenido, cambiandolo por un resumen de la estrategia de contenido con la información más separada y ordenada.</li>
+                        </ul>
+
+
                       </div>
                       <div className="flex flex-wrap gap-3">
                         <span className="inline-flex w-fit items-center rounded-full bg-primary/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-primary">

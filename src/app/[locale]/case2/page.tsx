@@ -4,10 +4,17 @@ import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { TitleLine } from "@/components/TitleLine";
 import { projects } from "@/resources/content";
 import { ArrowUp, Check, Info, LoaderPinwheel, Scan, Workflow } from "lucide-react";
+import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { use } from "react";
+type Props = {
+  params: Promise<{ locale: string }>;
+}
+export default function SocialAlertCaseStudy({ params }: Props) {
+  const { locale } = use(params);
 
-export default function SocialAlertCaseStudy() {
+  // Enable static rendering
+  setRequestLocale(locale);
   return (
     <div className="flex min-h-screen flex-col bg-white  dark:bg-neutral-950 mt-[84px]">
 
