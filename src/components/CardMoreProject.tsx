@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardDescription, CardTitle, CardFooter }
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 export default function CardHorizontalDemo({ project, index }: { project: any, index: string }) {
     return (

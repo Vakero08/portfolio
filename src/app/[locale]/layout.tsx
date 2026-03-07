@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { quick } from '@/app/ui/fonts';
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 
 export const metadata: Metadata = {
@@ -11,13 +14,19 @@ export const metadata: Metadata = {
   description: "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type Props = {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+};
+
+
+export default async function RootLayout({
+  children, params
+}: Props) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) return notFound();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
       </head>
@@ -26,8 +35,11 @@ export default function RootLayout({
       >
         <ThemeProvider
         >
-          <Header />
-          {children}
+          <NextIntlClientProvider>
+            <Header />
+
+            {children}
+          </NextIntlClientProvider>
           <Footer />
         </ThemeProvider>
       </body>

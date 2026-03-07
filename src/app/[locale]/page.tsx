@@ -1,17 +1,19 @@
 import CardHome from "@/components/CardHome";
 import { projects } from "@/resources/content";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations('HomePage');
+
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-black h-full mt-[84px]">
 
 
       {/* Hero Section */}
-      <section id="inicio" className="mx-auto w-full max-w-6xl px-8 py-26 text-center text-left">
+      <section id="inicio" className="mx-auto w-full max-w-6xl px-8 py-26 text-left">
 
         <h1 className="mb-6 text-5xl font-bold text-black dark:text-white">
-          Hola, Soy <span className="text-primary dark:text-blue-400">Jhonatan Duran</span>
+          {t('title')} <span className="text-primary dark:text-blue-400">Jhonatan Duran</span>
         </h1>
         <p className="max-w-2xl text-lg leading-relaxed text-black dark:text-white">
           Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.

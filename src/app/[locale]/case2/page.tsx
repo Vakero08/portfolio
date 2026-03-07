@@ -382,17 +382,18 @@ export default function SocialAlertCaseStudy() {
               <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">Flujos complejos</h4>
               <p className="mb-4 text-neutral-700 dark:text-neutral-300">
                 Se econtro fricción en flujos importantes como son:
-                <ul className="space-y-2 pl-6">
-                  {[
-                    "Creación de consultas.",
-                    "Configuración de alertas.",
-                  ].map((item, i) => (
-                    <li key={i} className="relative text-neutral-700 before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-500 dark:text-neutral-300 before:dark:bg-neutral-400">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+
               </p>
+              <ul className="space-y-2 pl-6">
+                {[
+                  "Creación de consultas.",
+                  "Configuración de alertas.",
+                ].map((item, i) => (
+                  <li key={i} className="relative text-neutral-700 before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-500 dark:text-neutral-300 before:dark:bg-neutral-400">
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <div className="rounded-lg bg-emerald-100 px-4 py-2 dark:bg-emerald-900/30">
                 <p className="font-medium text-black dark:text-white">Enfoque: Simplificar los flujos más importantes. </p>
               </div>

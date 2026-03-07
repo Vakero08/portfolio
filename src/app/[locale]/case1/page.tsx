@@ -744,13 +744,14 @@ export default function TokinAiCaseStudy() {
                 </span>
                 <p className="max-w-3xl text-sm leading-relaxed text-foreground">
                   En las pruebas iniciales se detectó lo siguiente:
-                  <ul className="list-disc list-inside">
-                    <li>Los usuarios solo editaban el objetivo, no interactuaban con las opciones de edición de contenido</li>
-                    <li>La mayoría de usuario aceptaban el contenido propuesto por la IA, por lo que se decidió simplificar el flujo.</li>
-                    <li>El modal de revisión de contenido contenía mucha información y era confuso para los usuarios.</li>
-                  </ul>
+
 
                 </p>
+                <ul className="list-disc list-inside">
+                  <li>Los usuarios solo editaban el objetivo, no interactuaban con las opciones de edición de contenido</li>
+                  <li>La mayoría de usuario aceptaban el contenido propuesto por la IA, por lo que se decidió simplificar el flujo.</li>
+                  <li>El modal de revisión de contenido contenía mucha información y era confuso para los usuarios.</li>
+                </ul>
               </div>
 
               {/* Iteraciones */}

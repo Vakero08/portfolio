@@ -3,9 +3,9 @@
 
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "motion/react"
 import { useState, useEffect } from "react"
-import Link from "next/link";
 import { LanguajeSelect } from "../languaje";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { Link } from "@/i18n/navigation";
 
 export default function Header() {
     const { scrollY } = useScroll()
@@ -87,6 +87,7 @@ export default function Header() {
                                 ))}
                             </div>
                             <div className="flex items-center gap-4">
+                                <LanguajeSelect />
                                 <AnimatedThemeToggler />
                             </div>
                         </>
