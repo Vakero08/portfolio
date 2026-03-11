@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 export default function CardHorizontalDemo({ project, index }: { project: any, index: string }) {
     const t = useTranslations('Content.projects')
-    const tCard = useTranslations('CardMoreProject')
+    const tCard = useTranslations('CardHome')
     return (
         <Card className='max-w-lg py-0 sm:flex-row sm:gap-0 w-full'>
             <CardContent className='grow-1 px-0'>
@@ -24,7 +24,7 @@ export default function CardHorizontalDemo({ project, index }: { project: any, i
                     <CardDescription>{t(`${project.key}.descripcion`)}</CardDescription>
                 </CardHeader>
                 <CardFooter className='gap-3 py-6'>
-                    <Link href={`/case${index}`} className='inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-3 font-medium text-white transition-colors hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600'>
+                    <Link href={`/case${index}`} className='inline-flex items-center gap-1 rounded-lg bg-primary px-3 py-3 font-medium text-xs text-white transition-colors hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600'>
                         {tCard('cta')} <ChevronRight />
                     </Link>
                 </CardFooter>

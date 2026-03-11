@@ -1,42 +1,181 @@
 {
-    "Metadata": {
-        "title": "Jhonatan Duran - Diseñador UX/UI",
-        "description": "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend"
-    },
-    "CardHome": {
-        "cta": "Ver caso de estudio"
-    },
-    "HomePage": {
-        "title": "Hola, Soy ",
-        "job-desc": "Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.",
-        "portafolio-title": "PORTAFOLIO"
-    },
-    "Content": {
-        "projects": {
-            "case1": {
-                "titulo": "TokinAi",
-                "descripcion": "Rediseño integral de una plataforma web enfocada en mejorar la usabilidad, optimizar flujos clave y reducir la fricción del usuario mediante investigación, prototipado y validación."
-            },
-            "case2": {
-                "titulo": "Social Alert",
-                "descripcion": "Diseño y prototipado de una aplicación móvil desde cero, cubriendo todo el flujo del usuario desde el login hasta las acciones principales, con enfoque mobile-first."
-            },
-            "case3": {
-                "titulo": "ScanAudience",
-                "descripcion": "Mejora de una plataforma existente mediante análisis de benchmark, encuestas a usuarios y rediseño de interfaces para simplificar la información y aumentar la eficiencia de uso."
-            }
-        }
-    },
-    "Header": {
-        "home": "Inicio",
-        "about": "Sobre mí",
-        "portfolio": "Portafolio",
-        "cv": "CV"
-    },
-    "Footer": {
-        "title": "CONTACTO",
-        "subtitle": "Vamos a conectar",
-        "description": "¡Ponte en contacto para charlar o simplemente para saludarnos! 👋",
-        "thanks": "Gracias por visitar"
+  "Metadata": {
+    "title": "Jhonatan Duran - Diseñador UX/UI",
+    "description": "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend"
+  },
+  "CardHome": {
+    "cta": "Ver caso de estudio"
+  },
+  "HomePage": {
+    "title": "Hola, Soy ",
+    "job-desc": "Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.",
+    "portafolio-title": "PORTAFOLIO"
+  },
+  "Content": {
+    "projects": {
+      "case1": {
+        "titulo": "TokinAi",
+        "descripcion": "Rediseño integral de una plataforma web enfocada en mejorar la usabilidad, optimizar flujos clave y reducir la fricción del usuario mediante investigación, prototipado y validación."
+      },
+      "case2": {
+        "titulo": "Social Alert",
+        "descripcion": "Diseño y prototipado de una aplicación móvil desde cero, cubriendo todo el flujo del usuario desde el login hasta las acciones principales, con enfoque mobile-first."
+      },
+      "case3": {
+        "titulo": "ScanAudience",
+        "descripcion": "Mejora de una plataforma existente mediante análisis de benchmark, encuestas a usuarios y rediseño de interfaces para simplificar la información y aumentar la eficiencia de uso."
+      }
     }
+  },
+  "Header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "portfolio": "Portafolio",
+    "cv": "CV"
+  },
+  "Footer": {
+    "title": "CONTACTO",
+    "subtitle": "Vamos a conectar",
+    "description": "¡Ponte en contacto para charlar o simplemente para saludarnos! 👋",
+    "thanks": "Gracias por visitar"
+  },
+  "Case1": {
+    "tag": "Caso de estudio: Creación de una aplicación Web/Móvil",
+    "desc": "TokinAi es una aplicación  diseñada para ayudar a emprendedores, creadores de contenido y equipos de marketing a generar contenido visual y textual para redes sociales de manera rápida y eficiente usando IA.",
+    "desc2": "El proyecto surgió de la necesidad de democratizar la creación de contenido profesional para pequeñas empresas y creadores independientes que no cuentan con equipos de diseño dedicados.",
+    "rol": "Rol",
+    "tile-rol": "Lead UI/UX Designer",
+    "desc-rol": "Investigación, diseño, testing",
+    "equipo": "Equipo",
+    "equipo-title": "5 personas",
+    "equipo-desc": "1 diseñador, 3 Developers, 1 PM",
+    "duration": "Duración",
+    "duration-title": "6 meses",
+    "duration-desc": "Enero - Julio 2025",
+    "section1-title": "Problema",
+    "section1-desc": "Muchos emprendedores enfrentan dificultades para mantener una presencia activa y consistente en redes sociales.",
+    "section1-desc2": "Los pequeños emprendedores destinan entre 5 y 8 horas semanales a la creación de contenido, tiempo que podría invertirse en actividades estratégicas para el crecimiento de su negocio. Además, el 73% de los usuarios encuestados manifestó sentirse abrumado por la necesidad de producir contenido de calidad de forma constante en múltiples plataformas, principalmente por falta de tiempo, recursos o conocimientos especializados.",
+    "section1-desc3": "Esta situación genera una barrera significativa para la visibilidad digital y el crecimiento sostenido de sus marcas.",
+    "section2-title": "Análisis competitivo",
+    "section2-desc": "Se examinaron plataformas similares para entender el mercado y las oportunidades de diferenciación.",
+    "pippit-desc": "Pippit es una plataforma con funciones de creación automática de contenido multimedia impulsada por IA, enfocada en la generación de videos e imágenes para marketing y redes sociales.",
+    "fortaleza-title": "Fortalezas",
+    "fortaleza-1": "IA para generación automática de videos e imágenes",
+    "fortaleza-2": "Avatares y narración multilingüe",
+    "fortaleza-3": "Plantillas y recursos de marketing",
+    "debilidaddes-title": "Puntos débiles",
+    "debilidad-1": "Falta de contexto de negocio/nicho",
+    "debilidad-2": "No sugiere frecuencia de publicación para diferentes redes",
+    "debilidad-3": "No permite organizar/reutilizar publicaciones",
+    "survey-subtitle": "Encuestas",
+    "survey-desc": "Para garantizar que nuestro producto satisfacía realmente las necesidades de nuestros usuarios, era esencial realizar entrevistas con emprendedores nuevos y con algún tiempo. Estas opiniones dieron forma a nuestra estrategia, lo que nos permitió crear un producto que aportaba un valor real y abordaba sus puntos débiles específicos.",
+    "survey-problem-title": "Problemas Identificados",
+    "survey-problem-title-2": "Emprendedores encuestados",
+    "survey-problem-title-2-1": "Encuestados",
+    "survey-item-1": "Falta de tiempo para publicar",
+    "survey-item-2": "Falta de conocimiento en marketing digital",
+    "survey-item-3": "No han usado herramientas de IA para crear contenido",
+    "survey-item-4": "No tienen página web, ni redes sociales",
+    "survey-item-5": "Publican de forma inconsistente",
+    "survey-item-6": "No miden resultados ni métricas",
+    "survey-item-7": "No saben cómo hacer publicidad (ads)",
+    "insights-subtitle": "Insights encontrados",
+    "insights-desc": "Después de realizar entrevistas a usuarios, investigaciones contextuales, análisis de plataformas similares y analizar los datos recopilados, pude clasificar los conocimientos adquiridos en estas tres categorías:",
+    "insight-time": "Tiempo",
+    "insight-time-des": "La mayoría de los emprendedores carecen del tiempo para aprender, ejecutar y vitalizar sus cuentas de redes sociales.",
+    "settings": "Personalización",
+    "settings-desc": "Muchos usuarios encuentran que el contenido generado por IA genérico no está personalizado o alineado con la marca.",
+    "unknown": "Desconocimiento",
+    "unknown-desc": "Muchos emprendedores saben que tienen un negocio real pero carecen de conocimiento sobre qué, cuándo o cómo publicar.",
+    "user-person-subtitle": "User Personas",
+    "user-person-desc": "A partir de la investigación, definimos tres perfiles de usuarios que representan el espectro de necesidades de TokinAi.",
+    "user-1-desc": "Dueño de negocio · 35 años",
+    "user-1-comment": "Sé que necesito publicar más, pero entre atender mi negocio y todo lo demás, simplemente no tengo tiempo.",
+    "user-target": "Objetivos",
+    "user-1-objetive-1": "Ganar visibilidad sin invertir horas en redes",
+    "user-1-objetive-2": "Atraer nuevos clientes con contenido profesional",
+    "user-frustraitions": "Frustraciones",
+    "user-1-frustration-1": "No sabe qué publicar ni cuándo",
+    "user-1-frustration-2": "Teme verse poco profesional en redes",
+    "user-2-desc": "Community Manager · 27 años",
+    "user-2-comment": "Manejo varias marcas a la vez y siempre necesito ideas frescas. Es agotador reinventarse cada semana.",
+    "user-2-objetive-1": "Generar ideas de contenido para múltiples clientes",
+    "user-2-objetive-2": "Mantener la voz y consistencia de cada marca",
+    "user-2-frustrations-1": "Agotamiento creativo al gestionar varias cuentas",
+    "user-2-frustrations-2": "Herramientas genéricas que no respetan el tono de marca",
+    "user-3-desc": "Emprendedora digital · 24 años",
+    "user-3-comment": "Tengo las ideas, pero necesito ayuda para transformarlas en publicaciones que realmente conecten.",
+    "user-3-objetive-1": "Construir audiencia orgánica desde cero",
+    "user-3-objetive-2": "Monetizar su marca personal con contenido de valor",
+    "user-3-frustrations-1": "No sabe adaptar contenido a distintas plataformas",
+    "user-3-frustrations-2": "Baja consistencia por falta de estructura",
+    "desing": "Diseño",
+    "design-desc": "Con una mejor comprensión de las necesidades de los usuarios, me sumergí en la creación de wireframes e iteraciones, centrándome en:",
+    "custom-settings": "Personalización de contenido",
+    "custom-settings-desc": "Para esta arista, se planteó un onboarding en un flujo progresivo de 3 pasos, la primera vez que el usuario entra para que proporcione datos de su negocio y datos de la competencia. Para asi poder generar contenido personalizado y alineado a la marca.",
+    "custom-step-1": "Identificar la marca",
+    "step-1": "Paso 1",
+    "custom-step-1-desc": "En este paso el usuario debía iniciar sesioón con sus redes sociales para poder obtener los datos de su negocio como su Nombre de negocio, seguidores, publicaciones, etc.",
+    "custom-step-2": "Identificar la competencia",
+    "step-2": "Paso 2",
+    "custom-step-2-desc": "En este paso el usuario debía ingresar la URL's de sus competencias para que la IA pueda analizar y obtener información de su competencia.",
+    "custom-step-3": "Revisar y editar los datos inferidos",
+    "step-3": "Paso 3",
+    "custom-step-3-desc": "En este paso el usuario podía revisar y editar los datos obtenidos de su negocio y de su competencia. Que fueron obtenidos con sus redes sociales y las URL's de sus competencias. Y algunos como el tono de sus publicaciones, etc. Que fueron inferidos por la IA.",
+    "findings": "Hallazgos",
+    "findings-desc": "En las pruebas iniciales se detectó los siguientes incovenientes:",
+    "findings-1": "El flujo de onboarding era demasiado extenso. Los usuarios abandonaban antes de configurar su perfil de negocio, impidiendo que puedan pasar el onboarding por tanto acceder a la funcionalidad principal de la plataforma.",
+    "findings-2": "Debido a la audiencia objetiva de la plataforma, que son dueños de negocios con poco tiempo y con conocimientos básicos. Muchos no tenían redes sociales, por tanto no se podían obtener los datos de su negocio.",
+    "findings-3": "Otros usuarios que si contaban con redes sociales, no tenían inisiado sesión con sus redes sociales, por tanto debían buscar o recordad sus credenciales para poder iniciar sesión. Lo cuál era demoroso y muchos no lo hacían.",
+    "findings-4": "Otros no contaban con el suficiente contenido en sus redes sociales, por tanto la IA no podía obtener los datos suficientes para poder crear una idea de la marca.",
+    "findings-5": "En la identificación de la competencia, los usuarios no sabían que poner en el campo de URL de la competencia. Les causaba confusión y no sabían que poner.",
+    "iteration": "Iteración",
+    "solution-proposal": "Propuesta de solución",
+    "solution-proposal-desc": "Se considero las observaciones de los usuarios y se rediseñó el primer paso del onboarding. Se intento que el usuario ya no inicie sesión con sus redes sociales, si no que ingrese la URL de su negocio o de su competencia. Para asi poder obtener los datos de su negocio y de su competencia.",
+    "problems-findings": "Problemas encontrados",
+    "problems-findings-desc": "Este cambio no fue bien recibido por los usuarios, ya que les causaba confusion el campo de URL de su negocio y el de la competencia. Además volvimos al problema de ser un proceso engorroso y largo. Al tener que buscar la URL de su negocio y el de su competencia, muchos usuarios no lo hacían.",
+    "final-solution": "Solución final",
+    "final-solution-desc": "Se volvió a plantear otra solución, esta vez se opto por inckuir un buscador de páginas, para que el usuario pueda buscar la página de su negocio y agregarla facilmente. Esta solución fue bien recibida por los usuarios, ya que les permitía obtener los datos de su negocio de manera rápida y eficiente. Sin tener que salir de la plataforma para obtener los datos de su negocio. Además se redujo a 2 pasos el onboarding, para que el usuario pueda obtener los datos de su negocio de manera más rápida y la sección de comptidores se agrego como un dato más a revisar inferido por la IA.",
+    "to-review": "Por revisar",
+    "to-review-desc": "A pesar de que esta solución menoró las fricciones y logro que muchos usuario avanzaran en el onboarding, surgió el problema de que algunas páginas no se encontraban el buscador, por lo que los usuarios tenían que ingresar los datos de su negocio de manera manual con el URL. Sin embargo se considero que esta solución era la mejor opción, debido a la tasa de usuario que avanzaban a comparación de los otros métodos.",
+    "time-iteration-desc": "Para el problema de tiempo, se propuso una solución que permitiera a los usuarios generar contenido de manera rápida y eficiente. Se planteó un sistema de estrategias que le premitan al usuario crear varias publicaciones en un solo proceso.",
+    "stratey-creation": "Creación de estrategia",
+    "strategy-creation-desc": "Aquí el usuario puede determinar el objetivo de su estrategia, el tipo de contenido que desea generar y el tono que desea usar. Por defecto se le propone una estrategia con variantes listas para usar.",
+    "content-review": "Revisión de contenido a generar",
+    "content-review-desc": "Aquí el usuario puede revisar que contenido se generará (Imagen, video, texto), para que red social se publicará y el valor en creditos que se requiere.Puede modificar si es necesario.",
+    "calendar-title": "Calendario de publicaciones",
+    "calendar-desc": "El sistema genera y agenda el contenido y recomienda los mejores horarios por red social. El usuario puede modificar en cualquier momento.",
+    "findings-time-1": "Los usuarios solo editaban el objetivo, no interactuaban con las opciones de edición de contenido",
+    "findings-time-2": "La mayoría de usuario aceptaban el contenido propuesto por la IA, por lo que se decidió simplificar el flujo.",
+    "findings-time-3": "El modal de revisión de contenido contenía mucha información y era confuso para los usuarios.",
+    "solution-proposal-time-desc": "Se rediseñó el flujo de creación de estrategias de contenido para solventar los hallazgos entontrados:",
+    "solution-proposal-time-1": "Se simplificó el flujo de creación de estrategias de contenido, presentando al usuario un solo input donde podia ingresar el objetivo de la estrategia, que es el campo que más editaba el usuario.",
+    "solution-proposal-time-2": "Los campos para el tono de contenido, hashtags o fecha de publicación se colocaron con menos jerarquia para no abrumar al usuario.",
+    "solution-proposal-time-3": "Se eliminó el modal de revisión de contenido, cambiandolo por un resumen de la estrategia de contenido con la información más separada y ordenada.",
+    "to-review-time": "En esta mejora, aunque el flujo fue más directo, se notó que los usuarios seguían sin interactuar con los campos de personalización de contenido, por lo que se sugierio revisar como mejorar la experiencia de personalización de contenido.",
+    "prototipo-final": "Prototipo final",
+    "testing-desc": "Probé el producto en varias etapas del proyecto.",
+    "pruebas-beta": "Pruebas beta",
+    "pruebas-beta-desc": "antes de lanzar la aplicación, la probamos con un grupo de emprendedores. Lo cuál nos sirvió para obtener algunos indicadores y donde había puntos de fricción",
+    "pruebas-a-b": "Pruebas A/B:",
+    "pruebas-a-b-desc": "se probaron varios pequeños flujos en la herramienta para medir como interactuaban los usuario con determinado flujo y si era intuitivo para el usuario",
+    "what-work": "Lo que funcionó",
+    "content-fast": "Creación rápida de contenido",
+    "content-fast-desc": "Los usuarios destacaron la capacidad de generar contenido de manera eficiente como un gran ahorro de tiempo.",
+    "automatic-posted": "Agendamiento/Publicación automático",
+    "automatic-posted-desc": "El usuario se vió entusiasmado por las recomendaciones de contenido a publicar y horarios para las distintas redes.",
+    "to-improve": "A mejorar",
+    "init-social-networks": "Inicio de sesión en redes sociales",
+    "init-social-networks-desc": "Muchos usuarios no tenían abierta la cuenta en el navegador. Lo que generaba fricciones en el proceso. Lo cuál generaba que usuarios no pasen de este paso.",
+    "learnings": "Aprendizajes",
+    "learnings-1": "Estudio previo de audiencia:",
+    "learnings-1-desc": "Al hacer las primeras entrevistas, los usuarios que más teníamos, eran de entre 40-65 años. Con pocos conocimientos de temas de marketing, crecimiento de marca, IA,  tecnología en general. Lo cuál me indicaba que las interacciones que para un público familiarizado con tecnología y tendencias, tal vez no funcione tan bien entre este rango de edad.",
+    "learnings-2": "Tiempo VS Teoría",
+    "learnings-2-desc": "Los tiempos del proyecto estuvieron apretados, lo cuál no permitió realizar todos los procesos que en teoría deberían realizarse en un proyecto de UX/UI, sin embargo se trato de equilibrar el procesos, para qie los entregables cuenten con un diseño centrado en el usuario en cada etapa.",
+    "learnings-3": "Iterar continuamente:",
+    "learnings-3-desc": "Monitorear continuamente el uso de los usuarios, recibir el feedback para mejorar. Ayudó mucho a encontrar en que puntos tenían fricción los usuarios y poder modificar y en ocasiones rediseñar por completo.",
+    "learnings-4": "Involucrar todos los actores:",
+    "learnings-4-desc": "en las distintas etapas es crucial para validar ideas y diseños, tanto con los stakeholders, como con el equipo de desarrolladores, para mantener una comunicación, misma sintonía y que no se retrase por falta de comunicación",
+    "more-projects": "Más proyectos"
+  }
 }
