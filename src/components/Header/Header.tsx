@@ -6,12 +6,14 @@ import { useState, useEffect } from "react"
 import { LanguajeSelect } from "../languaje";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
     const { scrollY } = useScroll()
     const [hidden, setHidden] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
+    const t = useTranslations('Header');
 
     useEffect(() => {
         const check = () => setIsMobile(window.innerWidth < 992)
@@ -35,10 +37,10 @@ export default function Header() {
     }, [menuOpen])
 
     const navLinks: { href: string; label: string; download?: string }[] = [
-        { href: "/", label: "Inicio" },
-        { href: "/about", label: "Sobre mí" },
-        { href: "/#portafolio", label: "Portafolio" },
-        { href: "/CV-UXUI-2026.pdf", label: "CV", download: "CV-UXUI-2026.pdf" },
+        { href: "/", label: t('home') },
+        { href: "/about", label: t('about') },
+        { href: "/#portafolio", label: t('portfolio') },
+        { href: "/CV-UXUI-2026.pdf", label: t('cv'), download: "CV-UXUI-2026.pdf" },
     ]
 
     return (

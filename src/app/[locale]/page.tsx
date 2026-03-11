@@ -24,7 +24,7 @@ export default function Home({ params }: Props) {
           {t('title')} <span className="text-primary dark:text-blue-400">Jhonatan Duran</span>
         </h1>
         <p className="max-w-2xl text-lg leading-relaxed text-black dark:text-white">
-          Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.
+          {t('job-desc')}
         </p>
 
       </section>
@@ -34,9 +34,9 @@ export default function Home({ params }: Props) {
         <div className="mb-32 text-center">
           <div className="relative">
             <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 md:text-6xl text-4xl font-light text-gray-300 opacity-30 dark:text-gray-700">
-              &lt;PORTAFOLIO/&gt;
+              &lt;{t('portafolio-title')}/&gt;
             </span>
-            <h2 className="relative text-4xl font-bold text-black dark:text-white">PORTAFOLIO</h2>
+            <h2 className="relative text-4xl font-bold text-black dark:text-white">{t('portafolio-title')}</h2>
           </div>
         </div>
 

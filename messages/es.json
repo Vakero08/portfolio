@@ -3,7 +3,40 @@
         "title": "Jhonatan Duran - Diseñador UX/UI",
         "description": "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend"
     },
+    "CardHome": {
+        "cta": "Ver caso de estudio"
+    },
     "HomePage": {
-        "title": "Hola, Soy "
+        "title": "Hola, Soy ",
+        "job-desc": "Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.",
+        "portafolio-title": "PORTAFOLIO"
+    },
+    "Content": {
+        "projects": {
+            "case1": {
+                "titulo": "TokinAi",
+                "descripcion": "Rediseño integral de una plataforma web enfocada en mejorar la usabilidad, optimizar flujos clave y reducir la fricción del usuario mediante investigación, prototipado y validación."
+            },
+            "case2": {
+                "titulo": "Social Alert",
+                "descripcion": "Diseño y prototipado de una aplicación móvil desde cero, cubriendo todo el flujo del usuario desde el login hasta las acciones principales, con enfoque mobile-first."
+            },
+            "case3": {
+                "titulo": "ScanAudience",
+                "descripcion": "Mejora de una plataforma existente mediante análisis de benchmark, encuestas a usuarios y rediseño de interfaces para simplificar la información y aumentar la eficiencia de uso."
+            }
+        }
+    },
+    "Header": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "portfolio": "Portafolio",
+        "cv": "CV"
+    },
+    "Footer": {
+        "title": "CONTACTO",
+        "subtitle": "Vamos a conectar",
+        "description": "¡Ponte en contacto para charlar o simplemente para saludarnos! 👋",
+        "thanks": "Gracias por visitar"
     }
 }
