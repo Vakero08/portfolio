@@ -3,24 +3,7 @@
 import { motion } from "motion/react"
 import Link from "next/link"
 import Image from "next/image"
-
-const services = [
-    {
-        id: "01",
-        title: "UX Research & Strategy",
-        desc: "Investigo, entrevisto y analizo para tomar decisiones basadas en datos reales, no suposiciones.",
-    },
-    {
-        id: "02",
-        title: "UI Design & Prototyping",
-        desc: "Transformo hallazgos en interfaces visuales coherentes, escalables y accesibles.",
-    },
-    {
-        id: "03",
-        title: "Frontend Implementation",
-        desc: "Llevo los diseños a código con React y Next.js, garantizando fidelidad pixel-perfect.",
-    },
-]
+import { useTranslations } from "next-intl"
 
 const skills = [
     { category: "Design", items: ["UX Research", "UI Design", "Prototyping", "Design Systems", "A/B Testing", "User Centered Design"] },
@@ -47,6 +30,30 @@ const fadeUp = {
 }
 
 export default function AboutPage() {
+    const t = useTranslations('About')
+    const services = [
+        {
+            id: "01",
+            title: "UX Research & Strategy",
+            desc: t('service-1'),
+        },
+        {
+            id: "02",
+            title: "UI Design & Prototyping",
+            desc: t('service-2'),
+        },
+        {
+            id: "03",
+            title: "Frontend Implementation",
+            desc: t('service-3'),
+        },
+    ]
+    const skills = [
+        { category: "Design", items: ["UX Research", "UI Design", "Prototyping", "Design Systems", "A/B Testing", "User Centered Design"] },
+        { category: "Tools", items: ["Figma", "FigJam", "Framer", "Maze", "AI Design tools"] },
+        { category: "Code", items: ["TypeScript", "React", "Next.js", "Tailwind", "Git", "CI/CD", "Node.js"] },
+    ]
+
 
     // Enable static rendering
     return (
@@ -152,7 +159,7 @@ export default function AboutPage() {
 
                     <div className="pt-1">
                         <span className="font-mono text-xs text-primary uppercase tracking-[0.18em]">
-                            01 — Quién soy
+                            01 — {t('quien-soy')}
                         </span>
                     </div>
 
@@ -165,33 +172,30 @@ export default function AboutPage() {
                         className="space-y-4"
                     >
                         <p className="text-2xl leading-relaxed font-light text-black dark:text-white">
-                            Hola soy Jona, Diseñador UX/UI basado en Quito.
+                            {t('desc-1')}
                         </p>
                         <p className="text-2xl leading-relaxed font-light text-black dark:text-white">
 
-                            Con +6 años de experiencia construyendo productos digitales de alto impacto.
-
-                            Mi valor diferencial reside en el equilibrio entre dos mundos: la estrategia de diseño UX/UI y la ingeniería de software. No solo diseño interfaces visualmente atractivas y basadas en investigación profunda; con mi background en desarrollo de software, entiendo como funciona el código y como contribuye a una usabilidad superior.
-                            Esta visión 360° me permite asegurar que cada píxel diseñado sea técnicamente viable y contribuya a una experiencia de usuario superior.
+                            {t('desc-2')}
                         </p>
 
                         <p className="text-2xl leading-relaxed font-light text-black dark:text-white">
 
-                            A lo largo de mi trayectoria, he podido colaborar de manera remota, trabajando como consultor para empresas en EE. UU. (Aktiun) y liderando procesos de innovación en Ecuador:
+                            {t('desc-3')}
                         </p>
 
                         <p className="text-2xl leading-relaxed font-light text-black dark:text-white">
-                            Enfoque UX/UI: Especialista en traducir hallazgos de investigación y pruebas A/B en prototipos de alta fidelidad. Tengo la obsesión de reducir la fricción en flujos críticos, garantizando que el diseño siempre responda a las necesidades reales del usuario.
+                            {t('desc-4')}
                         </p>
 
                         <p className="text-2xl leading-relaxed font-light text-black dark:text-white">
 
 
 
-                            Creo firmemente que el software de éxito nace de la intersección entre un código limpio y una experiencia humana intuitiva. Mi objetivo es seguir liderando proyectos donde la innovación técnica y el diseño centrado en el usuario sean los pilares para escalar productos globales.
+                            {t('desc-5')}
                         </p>
                         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                            Antes de abrir Figma, entiendo el problema. Creo que el mejor diseño es el que no se nota, porque simplemente resuelve.
+                            {t('desc-6')}
                         </p>
                     </motion.div>
 
@@ -204,7 +208,7 @@ export default function AboutPage() {
 
                     <div className="pt-1">
                         <span className="font-mono text-xs text-primary uppercase tracking-[0.18em]">
-                            02 — Qué hago
+                            02 — {t('que-hago')}
                         </span>
                     </div>
 

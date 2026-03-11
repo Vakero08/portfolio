@@ -469,5 +469,18 @@
     "learning-2-desc": "La validación y aplicación de heurísticas puede ser el punto de partida para mejorar y homologar el diseño. Pueden ser clave al momento de diseñar para saber como queremos comunicar nuestros diseños.",
     "info": "Jerarquía de información:",
     "info-desc": "La jerarquía de información es clave para que el usuario pueda entender mejor cada sección. Mantener colores, iconos  , tamaños, tipografías, etc. consistentes ayudan a comunicar la información de manera clara y eficiente."
+  },
+  "About": {
+    "service-1": "Investigo, entrevisto y analizo para tomar decisiones basadas en datos reales, no suposiciones.",
+    "service-2": "Transformo hallazgos en interfaces visuales coherentes, escalables y accesibles.",
+    "service-3": "Llevo los diseños a código con React y Next.js, garantizando fidelidad pixel-perfect.",
+    "quien-soy": "Quién soy",
+    "desc-1": "Hola soy Jona, Diseñador UX/UI basado en Quito.",
+    "desc-2": "Con +6 años de experiencia construyendo productos digitales de alto impacto. Mi valor diferencial reside en el equilibrio entre dos mundos: la estrategia de diseño UX/UI y la ingeniería de software. No solo diseño interfaces visualmente atractivas y basadas en investigación profunda; con mi background en desarrollo de software, entiendo como funciona el código y como contribuye a una usabilidad superior. Esta visión 360° me permite asegurar que cada píxel diseñado sea técnicamente viable y contribuya a una experiencia de usuario superior.",
+    "desc-3": "A lo largo de mi trayectoria, he podido colaborar de manera remota, trabajando como consultor para empresas en EE. UU. (Aktiun) y liderando procesos de innovación en Ecuador:",
+    "desc-4": "Enfoque UX/UI: Especialista en traducir hallazgos de investigación y pruebas A/B en prototipos de alta fidelidad. Tengo la obsesión de reducir la fricción en flujos críticos, garantizando que el diseño siempre responda a las necesidades reales del usuario.",
+    "desc-5": "Creo firmemente que el software de éxito nace de la intersección entre un código limpio y una experiencia humana intuitiva. Mi objetivo es seguir liderando proyectos donde la innovación técnica y el diseño centrado en el usuario sean los pilares para escalar productos globales.",
+    "desc-6": "Antes de abrir Figma, entiendo el problema. Creo que el mejor diseño es el que no se nota, porque simplemente resuelve.",
+    "que-hago": "Qué hago"
   }
 }
