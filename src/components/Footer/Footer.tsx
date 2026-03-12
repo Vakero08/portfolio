@@ -1,23 +1,25 @@
 import Link from "next/link";
 import { reenie } from '@/app/ui/fonts';
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+    const t = useTranslations('Footer');
     return (
         <footer className="mx-auto w-full max-w-6xl px-8 py-12 text-center">
             <section id="contacto" className="mx-auto w-full max-w-6xl px-8 py-16">
                 <div className="mb-12 text-center">
                     <div className="relative">
                         <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 md:text-6xl text-4xl font-light text-gray-300 opacity-30 dark:text-gray-700">
-                            &lt;CONTACTO/&gt;
+                            &lt;{t('title')}/&gt;
                         </span>
-                        <h2 className="relative text-4xl font-bold text-black dark:text-white">CONTACTO</h2>
+                        <h2 className="relative text-4xl font-bold text-black dark:text-white">{t('title')}</h2>
                     </div>
                 </div>
 
                 <div className="mx-auto max-w-2xl text-center">
-                    <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">Vamos a conectar</h3>
+                    <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">{t('subtitle')}</h3>
                     <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                        ¡Ponte en contacto para charlar o simplemente para saludarnos! 👋
+                        {t('description')}
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-6">
                         <Link
@@ -46,7 +48,7 @@ export default function Footer() {
 
 
             <p className={`text-8xl italic text-gray-600 dark:text-gray-400  ${reenie.className} antialiased`}>
-                Gracias por visitar
+                {t('thanks')}
             </p>
         </footer>
     );

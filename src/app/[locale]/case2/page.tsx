@@ -1,0 +1,938 @@
+import CardHorizontalDemo from "@/components/CardMoreProject";
+import { ImageCarousel } from "@/components/ImageCarousel";
+import { ImageZoom } from "@/components/kibo-ui/image-zoom";
+import { TitleLine } from "@/components/TitleLine";
+import { cn } from "@/lib/utils";
+import { projects } from "@/resources/content";
+import { ArrowUp, Check, Info, LoaderPinwheel, Scan, Workflow } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import Image from "next/image";
+import { use } from "react";
+type Props = {
+  params: Promise<{ locale: string }>;
+}
+export default function SocialAlertCaseStudy({ params }: Props) {
+  const { locale } = use(params);
+  const t = useTranslations('Case2')
+  const t1 = useTranslations('Case1')
+
+  // Enable static rendering
+  setRequestLocale(locale);
+  return (
+    <div className="flex min-h-screen flex-col bg-white  dark:bg-neutral-950 mt-[84px]">
+
+      {/* Hero Section */}
+      <section className="mx-auto w-full max-w-6xl px-8 py-16">
+        <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
+          {t('tag')}
+        </div>
+        <h1 className="mb-6 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+          Social Alert
+        </h1>
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300 mb-6">
+              {t('desc')}
+            </p>
+            <p className="text-lg leading-relaxed text-black dark:text-neutral-300">
+              {t('desc-2')}
+            </p>
+
+          </div>
+          {/* Right Column - Device Mockups */}
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative aspect-video ">
+              {/* Placeholder for project image */}
+              <ImageZoom  >
+                <Image
+                  width={1000}
+                  height={1000}
+                  src={projects[1].imagen1}
+                  alt="Placeholder image case study"
+
+                />
+              </ImageZoom>
+            </div>
+          </div>
+        </div>
+        {/* Project Details */}
+        <div className="grid gap-6 md:grid-cols-3 w-full max-w-6xl mx-auto">
+          <div className="border p-4 rounded-md bg-card">
+            <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">{t1('rol')}</h3>
+            <p className="text-base font-medium text-black dark:text-white">{t1('tile-rol')}</p>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{t1('desc-rol')}</p>
+          </div>
+          <div className="border p-4 rounded-md bg-card">
+            <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">{t1('equipo')}</h3>
+            <p className="text-base font-medium text-black dark:text-white">{t1('equipo-title')}</p>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{t1('equipo-desc')}</p>
+          </div>
+          <div className="border p-4 rounded-md bg-card">
+            <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">{t1('duration')}</h3>
+            <p className="text-base font-medium text-black dark:text-white">{t('duration-desc')}</p>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{t('duration-desc-2')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* El Problema */}
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={1} titulo={t1('section1-title')} />
+          <p className="my-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('problem-desc')}
+          </p>
+          <ul className="mb-4 space-y-2 pl-6">
+            {[
+              t('problem-1'),
+              t('problem-2'),
+              t('problem-3'),
+              t('problem-4'),
+              t('problem-5'),
+              t('problem-6'),
+              t('problem-7'),
+            ].map((item, i) => (
+              <li key={i} className="relative text-neutral-700 before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-500 dark:text-neutral-300 before:dark:bg-neutral-400">
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('problem-desc-1')}
+          </p>
+        </div>
+      </section>
+
+      {/* Objetivos */}
+      <section className="px-8 py-16">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={1} titulo={"Objetivos"} />
+          <div className="grid gap-12 md:grid-cols-2 my-8">
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white">{t('objetives')}</h3>
+              <ul className="space-y-3">
+                {[
+                  t('objetives-1'),
+                  t('objetives-2'),
+                  t('objetives-3'),
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-neutral-700 dark:text-neutral-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white">{t('bussines-objetive')}</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-neutral-700 dark:text-neutral-300">{t('bussines-objetive-1')}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p className="text-neutral-700 dark:text-neutral-300">{t('bussines-objetive-2')}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* User Research */}
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={2} titulo={"User Research"} />
+          <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('user-research')}
+          </p>
+          <ul className="space-y-2 pl-6">
+            {[
+              t('research-1'),
+              t('research-2'),
+              t('research-3'),
+              t('research-4')
+            ].map((item, i) => (
+              <li key={i} className="relative text-neutral-700 before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-500 dark:text-neutral-300 before:dark:bg-neutral-400">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Encuestas a usuarios */}
+      <section className="px-8 py-16">
+        <div className="mx-auto max-w-6xl">
+          <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">{t('surveys')}</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('surveys-desc')}
+          </p>
+          {/* Table with the results of the surveys */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-1')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-2')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-3')}
+                  </th>
+                  <th className="w-1/4 border-b border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-[#03AADD] dark:border-neutral-700 dark:text-[#03AADD]">
+                    {t('table-header-4')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, p: t('table-row-1-col-1'), h: t('table-row-1-col-2'), e: t('table-row-1-col-3'), o: t('table-row-1-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 2, p: t('table-row-2-col-1'), h: t('table-row-2-col-2'), e: t('table-row-2-col-3'), o: t('table-row-2-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 3, p: t('table-row-3-col-1'), h: t('table-row-3-col-2'), e: t('table-row-3-col-3'), o: t('table-row-3-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 4, p: t('table-row-4-col-1'), h: t('table-row-4-col-2'), e: t('table-row-4-col-3'), o: t('table-row-4-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 5, p: t('table-row-5-col-1'), h: t('table-row-5-col-2'), e: t('table-row-5-col-3'), o: t('table-row-5-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 6, p: t('table-row-6-col-1'), h: t('table-row-6-col-2'), e: t('table-row-6-col-3'), o: t('table-row-6-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 7, p: t('table-row-7-col-1'), h: t('table-row-7-col-2'), e: t('table-row-7-col-3'), o: t('table-row-7-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 8, p: t('table-row-8-col-1'), h: t('table-row-8-col-2'), e: t('table-row-8-col-3'), o: t('table-row-8-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 9, p: t('table-row-9-col-1'), h: t('table-row-9-col-2'), e: t('table-row-9-col-3'), o: t('table-row-9-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="border-r border-neutral-100 px-4 py-4 text-xs font-semibold text-neutral-600 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.p}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.h}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.e}
+                    </td>
+                    <td className="px-4 py-4">
+                      <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
+                        {row.o}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Benchmark de plataformas similares */}
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+        <div className="mx-auto max-w-6xl">
+          <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">{t('benchmark')}</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('benchmark-desc')}
+          </p>
+          {/* Table with the results of the benchmark */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('benchmark-header-1')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('benchmark-header-2')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-emerald-600 dark:border-neutral-700 dark:text-emerald-400">
+                    {t('benchmark-header-3')}
+                  </th>
+                  <th className="w-1/4 border-b border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-red-600 dark:border-neutral-700 dark:text-red-400">
+                    {t('benchmark-header-4')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, c1: t('benchmark-row-1-col-1'), c2: t.raw('benchmark-row-1-col-2'), c3: t.raw('benchmark-row-1-col-3'), c4: t.raw('benchmark-row-1-col-4'), bg: 'bg-white dark:bg-neutral-900', logo: '/images/case2/brand24.png' },
+                  { r: 2, c1: t('benchmark-row-2-col-1'), c2: t.raw('benchmark-row-2-col-2'), c3: t.raw('benchmark-row-2-col-3'), c4: t.raw('benchmark-row-2-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50', logo: '/images/case2/brandwatch.png' },
+                  { r: 3, c1: t('benchmark-row-3-col-1'), c2: t.raw('benchmark-row-3-col-2'), c3: t.raw('benchmark-row-3-col-3'), c4: t.raw('benchmark-row-3-col-4'), bg: 'bg-white dark:bg-neutral-900', logo: '/images/case2/sprout.png' },
+                  { r: 4, c1: t('benchmark-row-4-col-1'), c2: t.raw('benchmark-row-4-col-2'), c3: t.raw('benchmark-row-4-col-3'), c4: t.raw('benchmark-row-4-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50', logo: '/images/case2/hootsuite.png' }
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="flex flex-col items-center justify-center gap-2 border-r border-neutral-100 px-4 py-4 text-sm font-bold text-black dark:border-neutral-800 dark:text-white">
+                      <Image
+                        src={row.logo}
+                        alt="Encuestas a usuarios"
+                        width={100}
+                        height={100}
+                        className="h-10 w-auto rounded-md"
+                      />
+                      {row.c1}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c2 }} />
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c3 }} />
+                    <td className="px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c4 }} />
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Análisis heurístico */}
+      <section className=" px-8 py-16 ">
+        <div className="mx-auto max-w-6xl">
+          <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">{t('heuristic')}</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('heuristic-desc')}
+          </p>
+          {/* Table with the results of the heuristics */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[1000px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-[12%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-1')}
+                  </th>
+                  <th className="w-[20%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-2')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-3')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-4')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-5')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-6')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-7')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-8')}
+                  </th>
+                  <th className="w-[8%] border-b border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-emerald-600 dark:border-neutral-700 dark:text-emerald-400">
+                    {t('heuristic-header-9')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 2, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 3, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 4, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 5, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 6, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 7, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 8, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 9, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 10, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' }
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs font-bold text-black dark:border-neutral-800 dark:text-white">
+                      {t(`heuristic-row-${row.r}-col-1`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-2`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-3`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-4`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-5`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-6`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-7`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-8`)}
+                    </td>
+                    <td className="px-3 py-3 text-center">
+                      <span className="inline-flex items-center justify-center rounded-full px-2 py-1 text-[11px] font-bold bg-orange-50 text-orange-700 dark:bg-orange-950/40 dark:text-orange-400">
+                        {t(`heuristic-row-${row.r}-col-9`)}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-orange-50 dark:bg-orange-950/20">
+                  <td colSpan={8} className="border-r border-orange-100 dark:border-orange-900/50 px-4 py-3 text-right text-sm font-bold text-orange-800 dark:text-orange-400 uppercase tracking-wider">
+                    {t('heuristic-final-avg-label')}
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-black text-orange-600 dark:text-orange-400">
+                    {t('heuristic-final-avg-value')}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {/* UI problemas encontrados */}
+        <div className="mx-auto max-w-6xl mt-16">
+          <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">UI</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('ui')}
+          </p>
+          {/* Screens row */}
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {/* Pantalla 1 */}
+            <div className="flex flex-col gap-3">
+              <h1 className=" font-bold text-foreground">{t('query-creation')}</h1>
+              <div className="rounded-2xl border  bg-muted p-px">
+                <div className="flex items-center gap-2 border-b  px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                </div>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100 ">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
+                    <Image
+                      src={`/images/case2/create_query_old_${locale}.svg`}
+                      alt="Pantalla 2"
+                      width={1000}
+                      height={1000}
+                      className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Pantalla 2 */}
+            <div className="flex flex-col gap-3">
+              <h1 className=" font-bold text-foreground">{t('dashboard')}</h1>
+              <div className="rounded-2xl border  bg-muted p-px">
+
+                <div className="flex items-center gap-2 border-b  px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                </div>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
+                    <Image
+                      src={`/images/case2/dashboard_old_${locale}.svg`}
+                      alt="Pantalla 2"
+                      width={1000}
+                      height={1000}
+                      className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+
+            </div>
+            {/* Pantalla  */}
+            <div className="flex flex-col gap-3">
+              <h1 className=" font-bold text-foreground">{t('alert-settings')}</h1>
+              <div className="rounded-2xl border  bg-muted p-px">
+                <div className="flex items-center gap-2 border-b  px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                </div>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
+                    <Image
+                      src={`/images/case2/alerts_old_${locale}.svg`}
+                      alt="Pantalla 2"
+                      width={1000}
+                      height={1000}
+                      className="rounded-bl-2xl rounded-br-2xl w-full h-full object-cover"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div className="mx-auto max-w-6xl mt-16">
+          <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">{t('heatmap')}</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('heatmap-desc')}
+
+          </p>
+          {/* Screens row */}
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {/* Pantalla 1 */}
+            <div className="flex flex-col gap-3">
+              <h1 className=" font-bold text-foreground">{t('heatmap-query')}</h1>
+              <div className="rounded-2xl border  bg-muted p-px">
+                <div className="flex items-center gap-2 border-b  px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                </div>
+                <div className="flex items-center justify-center h-[200px] md:h-[340px] overflow-hidden bg-background">
+                  <ImageZoom>
+                    <Image
+                      src="/images/case2/query_heat.png"
+                      alt="Pantalla 2"
+                      width={1000}
+                      height={1000}
+                      className="rounded-bl-2xl rounded-br-2xl object-contain"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+              <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                {t('heatmap-query-desc')}
+              </p>
+
+            </div>
+
+            {/* Pantalla 2 */}
+            <div className="flex flex-col gap-3">
+              <h1 className=" font-bold text-foreground">{t('heatmap-dashboard')}</h1>
+              <div className="rounded-2xl border  bg-muted p-px">
+
+                <div className="flex items-center gap-2 border-b  px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                </div>
+                <div className="flex items-center justify-center h-[200px] md:h-[340px] overflow-hidden bg-background">
+                  <ImageCarousel images={[{ src: "/images/case2/Dashboard_heat.png", alt: "Pantalla 2" }, { src: "/images/case2/dash_areamap.png", alt: "Pantalla 2" }]} />
+
+                </div>
+              </div>
+              <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                {t('heat-dash')}
+              </p>
+
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Insights encontrados */}
+      <section className="px-8 pt-8 pb-16">
+        <div className="mx-auto max-w-6xl">
+          <h3 className="mb-8 text-2xl font-bold text-black dark:text-white">{t('insight')}</h3>
+          <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('insght-desc')}
+          </p>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#03AADD]/10">
+                <Workflow className="h-6 w-6 text-[#03AADD]" />
+              </div>
+              <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">{t('insight-1')}</h4>
+              <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+                {t('insight-1-desc')}
+
+              </p>
+              <ul className="space-y-2 pl-6">
+                {[
+                  t('insight-item-1'),
+                  t('insight-item-2'),
+                ].map((item, i) => (
+                  <li key={i} className="relative text-neutral-700 before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-500 dark:text-neutral-300 before:dark:bg-neutral-400">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="rounded-lg bg-emerald-100 px-4 py-2 dark:bg-emerald-900/30">
+                <p className="font-medium text-black dark:text-white">{t('insight-focus-1')}</p>
+              </div>
+            </div>
+            <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#03AADD]/10">
+                <Info className="h-6 w-6 text-[#03AADD]" />
+              </div>
+              <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">{t('insight-2')}</h4>
+              <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+                {t('insight-2-desc')}
+              </p>
+              <div className="rounded-lg bg-emerald-100 px-4 py-2 dark:bg-emerald-900/30">
+                <p className="font-medium text-black dark:text-white">{t('insight-2-focus')}</p>
+              </div>
+            </div>
+            <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#03AADD]/10">
+                <Scan className="h-6 w-6 text-[#03AADD]" />
+              </div>
+              <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">{t('insight-3')}</h4>
+              <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+                {t('insight-3-desc')}
+              </p>
+              <div className="rounded-lg bg-emerald-100 px-4 py-2 dark:bg-emerald-900/30">
+                <p className="font-medium text-black dark:text-white">{t('insight-3-focus')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Diseño */}
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={3} titulo={t1('desing')} />
+          <p className="mb-12 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 my-8">
+            {t('design-desc')}
+          </p>
+          {/* Creación de consultas */}
+          <div className="bg-card p-8 rounded-md border">
+            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">{t('create-query')}</h3>
+            <p className="mb-8">{t('create-query-desc')}</p>
+            <div className="mt-4 grid gap-8 lg:grid-cols-2">
+              <div className="rounded-2xl border  bg-muted p-px">
+                <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                  <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                    {t('ste-1')}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center  aspect-ratio-1">
+                  <ImageZoom>
+                    <Image
+                      width={1000}
+                      height={1000}
+                      src={"/images/case2/Create-query-new.svg"}
+                      alt="Placeholder image case study"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl font-bold text-black dark:text-white">{t('input-title')}</h3>
+                <p className="text-sm leading-relaxed text-foreground">
+                  {t('input-desc')}
+                </p>
+                <div className="flex flex-col gap-4">
+                  <div className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                    {t('to-improve')}
+                  </div>
+                  <ul>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-1')}</b> {t('to-improve-1-1')}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-8 lg:grid-cols-2">
+              <div className="rounded-2xl border  bg-muted p-px h-fit">
+                <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                  <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                    {t('step-2')}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-[200px] md:h-[310px] overflow-hidden">
+                  <ImageZoom>
+                    <Image
+                      width={1000}
+                      height={1000}
+                      src={"/images/case2/Create-query-2.svg"}
+                      alt="Placeholder image case study"
+                      className="rounded-bl-2xl rounded-br-2xl object-cover"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-wrap gap-3">
+                  <h3 className="text-xl font-bold text-black dark:text-white">{t('verify-query')}</h3>
+                  <p className="text-sm leading-relaxed text-foreground">
+                    {t('verify-query-desc')}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <div className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                    {t('solving-problem')}
+                  </div>
+                  <ul>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('problem-solving-1')}</b> {t('problem-solving-1-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('problem-solving-2')}</b> {t('problem-solving-2-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('problem-solving-3')}</b> {t('problem-solving-3-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('problem-solving-4')}</b>{t('problem-solving-4-desc')}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Tablero */}
+          <div className="bg-card p-8 rounded-md border my-16">
+            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">{t('tablero')}</h3>
+            <p className="mb-8">{t('tablero-desc')}</p>
+            <div className="mt-4 grid gap-8 lg:grid-cols-2">
+              <div className="rounded-2xl border  bg-muted p-px h-fit">
+                <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                  <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                    {t('tablero-new')}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center  h-[200px] md:h-[310px] overflow-hidden">
+                  <ImageCarousel
+                    images={[
+                      { src: "/images/case2/dash_1.svg", alt: "Pantalla 1" },
+                      { src: "/images/case2/dash_2.svg", alt: "Pantalla 2" },
+                      { src: "/images/case2/dash_3.svg", alt: "Pantalla 3" },
+                      { src: "/images/case2/dash_4.svg", alt: "Pantalla 4" },
+                      { src: "/images/case2/dash_5.svg", alt: "Pantalla 5" },
+                    ]}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl font-bold text-black dark:text-white">{t('tablero-new')}</h3>
+                <p className="text-sm leading-relaxed text-foreground">
+                  {t('tablero-new-desc')}
+                </p>
+                <div className="flex flex-col gap-4">
+                  <div className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                    {t('to-improve')}
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-2')}</b>{t('to-improve-2-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-3')}</b> {t('to-improve-3-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-4')}:</b>{t('to-improve-4-desc')}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          {/* Creación de alertas */}
+          <div className="bg-card p-8 rounded-md border my-16">
+            <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">{t('alert-settings')}</h3>
+            <p className="mb-8">{t('alert-settings-desc')}</p>
+            <div className="mt-4 grid gap-8 lg:grid-cols-2">
+              <div className="rounded-2xl border  bg-muted p-px">
+                <div className="flex items-center gap-2 border-b border-cyan-500/20 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-[#ff6467]" />
+                  <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
+                  <span className="h-2 w-2 rounded-full bg-[#05df72]" />
+                  <span className="ml-2 rounded-full bg-cyan-500/10 px-2 py-0.5 text-xs font-medium text-[#03aadd]">
+                    {t('alert-settings')}
+                  </span>
+                </div>
+                <div className="flex items-start justify-center h-[200px] md:h-[410px] overflow-hidden">
+                  <ImageZoom>
+                    <Image
+                      src="/images/case2/alerta_new.svg"
+                      alt="Pantalla 1"
+                      width={1000}
+                      height={1000}
+                      className="rounded-bl-2xl rounded-br-2xl object-cover"
+                    />
+                  </ImageZoom>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl font-bold text-black dark:text-white">{t('alert-settings')}</h3>
+
+                <div className="flex flex-col gap-4">
+                  <div className="inline-flex w-fit items-center rounded-full bg-green-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-green-700">
+                    {t('to-improve')}
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-alerts-1')}</b>{t('to-improve-alerts-1-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-alerts-2')}:</b> {t('to-improve-alerts-2-desc')}
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-6 w-6 text-[#03AADD]" />
+                      <p className="text-sm leading-relaxed text-foreground">
+                        <b>{t('to-improve-alerts-3')}:</b> {t('to-improve-alerts-3-desc')}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Testing */}
+      <section className="px-8 pb-16">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={4} titulo={"Testing"} />
+          <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('testing-desc')}
+          </p>
+          <ul className="space-y-3">
+            {[
+              t('testing-desc-1'),
+              t('testing-desc-2'),
+              t('testing-desc-3'),
+              t('testing-desc-4'),
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-neutral-700 dark:text-neutral-300">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Solución Final */}
+      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 pb-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={5} titulo={"Resultados Finales"} />
+          <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t('final-result')}
+          </p>
+          <ul className="space-y-3">
+            {[
+              t('final-result-1'),
+              t('final-result-2'),
+              t('final-result-3'),
+              t('final-result-4'),
+              t('final-result-5'),
+              t('final-result-6'),
+              t('final-result-7'),
+
+
+
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-neutral-700 dark:text-neutral-300">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Aprendizajes */}
+      <section className="px-8 pb-16">
+        <div className="mx-auto max-w-6xl">
+          <TitleLine numero={5} titulo={t1('learnings')} />
+
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                <strong className="text-black dark:text-white">{t('learning-1')}:</strong> {t('learning-1-desc')}
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                <strong className="text-black dark:text-white">{t('learning-2')}:</strong>{t('learning-2-desc')}
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#03AADD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                <strong className="text-black dark:text-white">{t('learning-3')}:</strong>{t('learning-3-desc')}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-8 py-16">
+        <div className="text-center mb-16">
+          <div className="relative">
+            <span className="absolute left-1/2 top-[-32px] -translate-x-1/2 text-md md:text-6xl font-light text-gray-300 opacity-30 dark:text-gray-700">
+              &lt;{t1('more-projects')}/&gt;
+            </span>
+            <h2 className="relative text-4xl font-bold text-black dark:text-white">{t1('more-projects')}</h2>
+          </div>
+        </div>
+        <div className="flex gap-16 flex-col md:flex-row w-full">
+          <CardHorizontalDemo project={projects[0]} index="1" />
+          <CardHorizontalDemo project={projects[2]} index="3" />
+        </div>
+      </section>
+    </div>
+  );
+}
