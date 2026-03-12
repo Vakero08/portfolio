@@ -174,16 +174,55 @@ export default function SocialAlertCaseStudy({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('surveys-desc')}
           </p>
-          <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-700">
-            <ImageZoom>
-              <Image
-                src="/images/case2/table_case_2.svg"
-                alt="Encuestas a usuarios"
-                width={1000}
-                height={1000}
-                className="w-full"
-              />
-            </ImageZoom>
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-1')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-2')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('table-header-3')}
+                  </th>
+                  <th className="w-1/4 border-b border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-[#03AADD] dark:border-neutral-700 dark:text-[#03AADD]">
+                    {t('table-header-4')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, p: t('table-row-1-col-1'), h: t('table-row-1-col-2'), e: t('table-row-1-col-3'), o: t('table-row-1-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 2, p: t('table-row-2-col-1'), h: t('table-row-2-col-2'), e: t('table-row-2-col-3'), o: t('table-row-2-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 3, p: t('table-row-3-col-1'), h: t('table-row-3-col-2'), e: t('table-row-3-col-3'), o: t('table-row-3-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 4, p: t('table-row-4-col-1'), h: t('table-row-4-col-2'), e: t('table-row-4-col-3'), o: t('table-row-4-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 5, p: t('table-row-5-col-1'), h: t('table-row-5-col-2'), e: t('table-row-5-col-3'), o: t('table-row-5-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 6, p: t('table-row-6-col-1'), h: t('table-row-6-col-2'), e: t('table-row-6-col-3'), o: t('table-row-6-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 7, p: t('table-row-7-col-1'), h: t('table-row-7-col-2'), e: t('table-row-7-col-3'), o: t('table-row-7-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 8, p: t('table-row-8-col-1'), h: t('table-row-8-col-2'), e: t('table-row-8-col-3'), o: t('table-row-8-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 9, p: t('table-row-9-col-1'), h: t('table-row-9-col-2'), e: t('table-row-9-col-3'), o: t('table-row-9-col-4'), bg: 'bg-white dark:bg-neutral-900' },
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="border-r border-neutral-100 px-4 py-4 text-xs font-semibold text-neutral-600 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.p}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.h}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {row.e}
+                    </td>
+                    <td className="px-4 py-4">
+                      <span className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
+                        {row.o}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
