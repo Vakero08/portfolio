@@ -174,6 +174,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('surveys-desc')}
           </p>
+          {/* Table with the results of the surveys */}
           <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
             <table className="w-full min-w-[720px] border-collapse text-sm">
               <thead>
@@ -234,16 +235,50 @@ export default function SocialAlertCaseStudy({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('benchmark-desc')}
           </p>
-          <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-700">
-            <ImageZoom>
-              <Image
-                src="/images/case2/table2_case_2.svg"
-                alt="Encuestas a usuarios"
-                width={1000}
-                height={1000}
-                className="w-full"
-              />
-            </ImageZoom>
+          {/* Table with the results of the benchmark */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('benchmark-header-1')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('benchmark-header-2')}
+                  </th>
+                  <th className="w-1/4 border-b border-r border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-emerald-600 dark:border-neutral-700 dark:text-emerald-400">
+                    {t('benchmark-header-3')}
+                  </th>
+                  <th className="w-1/4 border-b border-neutral-200 px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-red-600 dark:border-neutral-700 dark:text-red-400">
+                    {t('benchmark-header-4')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, c1: t('benchmark-row-1-col-1'), c2: t.raw('benchmark-row-1-col-2'), c3: t.raw('benchmark-row-1-col-3'), c4: t.raw('benchmark-row-1-col-4'), bg: 'bg-white dark:bg-neutral-900', logo: '/images/case2/brand24.png' },
+                  { r: 2, c1: t('benchmark-row-2-col-1'), c2: t.raw('benchmark-row-2-col-2'), c3: t.raw('benchmark-row-2-col-3'), c4: t.raw('benchmark-row-2-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50', logo: '/images/case2/brandwatch.png' },
+                  { r: 3, c1: t('benchmark-row-3-col-1'), c2: t.raw('benchmark-row-3-col-2'), c3: t.raw('benchmark-row-3-col-3'), c4: t.raw('benchmark-row-3-col-4'), bg: 'bg-white dark:bg-neutral-900', logo: '/images/case2/sprout.png' },
+                  { r: 4, c1: t('benchmark-row-4-col-1'), c2: t.raw('benchmark-row-4-col-2'), c3: t.raw('benchmark-row-4-col-3'), c4: t.raw('benchmark-row-4-col-4'), bg: 'bg-neutral-50/60 dark:bg-neutral-900/50', logo: '/images/case2/hootsuite.png' }
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="flex flex-col items-center justify-center gap-2 border-r border-neutral-100 px-4 py-4 text-sm font-bold text-black dark:border-neutral-800 dark:text-white">
+                      <Image
+                        src={row.logo}
+                        alt="Encuestas a usuarios"
+                        width={100}
+                        height={100}
+                        className="h-10 w-auto rounded-full"
+                      />
+                      {row.c1}
+                    </td>
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c2 }} />
+                    <td className="border-r border-neutral-100 px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c3 }} />
+                    <td className="px-4 py-4 leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300" dangerouslySetInnerHTML={{ __html: row.c4 }} />
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
