@@ -234,7 +234,7 @@
     "insight-3": "Problemas de usabilidad",
     "insight-3-desc": "Existen problemas de usabilidad en la plataforma que dificultan la experiencia del usuario.",
     "insight-3-focus": "Enfoque: Mejorar la usabilidad de la plataforma corrigiendo los puntos identificados en el análisis heurístico.",
-    "design-desc": "Se trabajó mejorando los flujos más importantes, como el flujo de creación de consultas, tablero y alertas.</p>",
+    "design-desc": "Se trabajó mejorando los flujos más importantes, como el flujo de creación de consultas, tablero y alertas.",
     "create-query": "Creación de consultas",
     "create-query-desc": "Se rediseñó el flujo de creación de consultas, para que sea más sencillo y rápido para el usuario. Se dividio el flujo en 2 pasos.",
     "ste-1": "Paso1",

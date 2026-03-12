@@ -545,7 +545,7 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
             <div className="grid gap-4 md:grid-cols-3">
               {[
                 {
-                  phase: t('Case3.phase-2-2'),
+                  phase: t('phase-2-2'),
                   hmw: t('phase-2-2-hmw'),
                   color: "border-emerald-200 bg-emerald-50 dark:border-emerald-800 dark:bg-emerald-950/30",
                   tag: "text-emerald-700 dark:text-emerald-400",
