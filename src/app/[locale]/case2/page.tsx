@@ -2,6 +2,7 @@ import CardHorizontalDemo from "@/components/CardMoreProject";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { TitleLine } from "@/components/TitleLine";
+import { cn } from "@/lib/utils";
 import { projects } from "@/resources/content";
 import { ArrowUp, Check, Info, LoaderPinwheel, Scan, Workflow } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -15,6 +16,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
   const { locale } = use(params);
   const t = useTranslations('Case2')
   const t1 = useTranslations('Case1')
+
   // Enable static rendering
   setRequestLocale(locale);
   return (
@@ -268,7 +270,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
                         alt="Encuestas a usuarios"
                         width={100}
                         height={100}
-                        className="h-10 w-auto rounded-full"
+                        className="h-10 w-auto rounded-md"
                       />
                       {row.c1}
                     </td>
@@ -398,10 +400,12 @@ export default function SocialAlertCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100 ">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case2/create_query_old.svg"
+                      src={`/images/case2/create_query_old_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
@@ -423,10 +427,12 @@ export default function SocialAlertCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case2/dashboard_old.svg"
+                      src={`/images/case2/dashboard_old_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
@@ -446,10 +452,12 @@ export default function SocialAlertCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case2/alerts_old.svg"
+                      src={`/images/case2/alerts_old_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
