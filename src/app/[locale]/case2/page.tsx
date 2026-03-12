@@ -290,16 +290,95 @@ export default function SocialAlertCaseStudy({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('heuristic-desc')}
           </p>
-          <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-700">
-            <ImageZoom>
-              <Image
-                src="/images/case2/heuristic.svg"
-                alt="Encuestas a usuarios"
-                width={1000}
-                height={1000}
-                className="w-full"
-              />
-            </ImageZoom>
+          {/* Table with the results of the heuristics */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[1000px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-[12%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-1')}
+                  </th>
+                  <th className="w-[20%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-2')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-3')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-4')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-5')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-6')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-7')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-header-8')}
+                  </th>
+                  <th className="w-[8%] border-b border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-emerald-600 dark:border-neutral-700 dark:text-emerald-400">
+                    {t('heuristic-header-9')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 2, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 3, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 4, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 5, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 6, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 7, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 8, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 9, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 10, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' }
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs font-bold text-black dark:border-neutral-800 dark:text-white">
+                      {t(`heuristic-row-${row.r}-col-1`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-2`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-3`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-4`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-5`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-6`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-7`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-row-${row.r}-col-8`)}
+                    </td>
+                    <td className="px-3 py-3 text-center">
+                      <span className="inline-flex items-center justify-center rounded-full px-2 py-1 text-[11px] font-bold bg-orange-50 text-orange-700 dark:bg-orange-950/40 dark:text-orange-400">
+                        {t(`heuristic-row-${row.r}-col-9`)}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-orange-50 dark:bg-orange-950/20">
+                  <td colSpan={8} className="border-r border-orange-100 dark:border-orange-900/50 px-4 py-3 text-right text-sm font-bold text-orange-800 dark:text-orange-400 uppercase tracking-wider">
+                    {t('heuristic-final-avg-label')}
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-black text-orange-600 dark:text-orange-400">
+                    {t('heuristic-final-avg-value')}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         {/* UI problemas encontrados */}
