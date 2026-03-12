@@ -1,6 +1,7 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
+import { cn } from "@/lib/utils";
 import { projects } from "@/resources/content";
 import { Check, Info, Scan, Workflow } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -582,16 +583,95 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('heuristic-analisys-desc')}
           </p>
-          <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-700">
-            <ImageZoom>
-              <Image
-                src="/images/case3/heuristic_scan.svg"
-                alt="Encuestas a usuarios"
-                width={1000}
-                height={1000}
-                className="w-full"
-              />
-            </ImageZoom>
+          {/* Table with the results of the heuristics */}
+          <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <table className="w-full min-w-[1000px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-neutral-100 dark:bg-neutral-800">
+                  <th className="w-[12%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-1')}
+                  </th>
+                  <th className="w-[20%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-2')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-3')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-4')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-5')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-6')}
+                  </th>
+                  <th className="w-[15%] border-b border-r border-neutral-200 px-3 py-3 text-left text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-7')}
+                  </th>
+                  <th className="w-[5%] border-b border-r border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-black dark:border-neutral-700 dark:text-white">
+                    {t('heuristic-scan-header-8')}
+                  </th>
+                  <th className="w-[8%] border-b border-neutral-200 px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-emerald-600 dark:border-neutral-700 dark:text-emerald-400">
+                    {t('heuristic-scan-header-9')}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                {[
+                  { r: 1, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 2, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 3, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 4, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 5, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 6, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 7, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 8, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' },
+                  { r: 9, bg: 'bg-white dark:bg-neutral-900' },
+                  { r: 10, bg: 'bg-neutral-50/60 dark:bg-neutral-900/50' }
+                ].map((row) => (
+                  <tr key={row.r} className={row.bg}>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs font-bold text-black dark:border-neutral-800 dark:text-white">
+                      {t(`heuristic-scan-row-${row.r}-col-1`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-2`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-3`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-4`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-5`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-6`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-xs leading-relaxed text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-7`)}
+                    </td>
+                    <td className="border-r border-neutral-100 px-3 py-3 text-center text-xs font-medium text-neutral-700 dark:border-neutral-800 dark:text-neutral-300">
+                      {t(`heuristic-scan-row-${row.r}-col-8`)}
+                    </td>
+                    <td className="px-3 py-3 text-center">
+                      <span className="inline-flex items-center justify-center rounded-full px-2 py-1 text-[11px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
+                        {t(`heuristic-scan-row-${row.r}-col-9`)}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-emerald-50 dark:bg-emerald-950/20">
+                  <td colSpan={8} className="border-r border-emerald-100 dark:border-emerald-900/50 px-4 py-3 text-right text-sm font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-wider">
+                    {t('heuristic-scan-final-avg-label')}
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-black text-emerald-600 dark:text-emerald-400">
+                    {t('heuristic-scan-final-avg-value')}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         {/* UI problemas encontrados */}
@@ -611,10 +691,12 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case3/home-old.svg"
+                      src={`/images/case3/home_old_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
@@ -636,10 +718,12 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case3/add-pages.svg"
+                      src={`/images/case3/add_pages_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
@@ -659,10 +743,12 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case3/create-space.svg"
+                      src={`/images/case3/create_space_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
@@ -681,10 +767,12 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                   <span className="h-2 w-2 rounded-full bg-[#fdc700]" />
                   <span className="h-2 w-2 rounded-full bg-[#05df72]" />
                 </div>
-                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-background">
-                  <ImageZoom>
+                <div className="flex items-center justify-center h-[210px] overflow-hidden bg-slate-100">
+                  <ImageZoom backdropClassName={cn(
+                    '[&_[data-rmiz-modal-overlay="visible"]]:bg-white/80'
+                  )}>
                     <Image
-                      src="/images/case3/tablero.svg"
+                      src={`/images/case3/tablero_${locale}.svg`}
                       alt="Pantalla 2"
                       width={1000}
                       height={1000}
