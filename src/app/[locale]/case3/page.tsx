@@ -424,14 +424,14 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                 {
                   phase: t('phase-2'),
                   hmw: t('phase-2-hmw'),
-                  color: "border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950/30",
-                  tag: "text-orange-700 dark:text-orange-400",
+                  color: "border-orange-200 bg-orange-50 dark:border-cyan-800 dark:bg-cyan-950/30",
+                  tag: "text-cyan-700 dark:text-cyan-400",
                 },
                 {
                   phase: t('phase-4'),
                   hmw: t('phase-4-hmw'),
-                  color: "border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950/30",
-                  tag: "text-red-700 dark:text-red-400",
+                  color: "border-red-200 bg-red-50 dark:border-rose-400 dark:bg-rose-400/20",
+                  tag: "text-rose-700 dark:text-rose-400",
                 },
               ].map(({ phase, hmw, color, tag }) => (
                 <div key={phase} className={`rounded-xl border p-5 ${color}`}>
@@ -554,14 +554,14 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                 {
                   phase: t('phase-3-3'),
                   hmw: t('phase-3-3-hmw'),
-                  color: "border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950/30",
-                  tag: "text-orange-700 dark:text-orange-400",
+                  color: "border-orange-200 bg-orange-50 dark:border-cyan-800 dark:bg-cyan-900/20",
+                  tag: "text-cyan-700 dark:text-cyan-400",
                 },
                 {
                   phase: t('phase-4-4'),
                   hmw: t('phase-4-4-hmw'),
-                  color: "border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950/30",
-                  tag: "text-red-700 dark:text-red-400",
+                  color: "border-red-200 bg-red-50 dark:border-rose-400 dark:bg-rose-400/20",
+                  tag: "text-rose-700 dark:text-rose-400",
                 },
               ].map(({ phase, hmw, color, tag }) => (
                 <div key={phase} className={`rounded-xl border p-5 ${color}`}>
@@ -656,17 +656,17 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
                       {t(`heuristic-scan-row-${row.r}-col-8`)}
                     </td>
                     <td className="px-3 py-3 text-center">
-                      <span className="inline-flex items-center justify-center rounded-full px-2 py-1 text-[11px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
+                      <span className="inline-flex items-center justify-center rounded-full px-2 py-1 text-[11px] font-bold bg-orange-50 text-orange-700 dark:bg-orange-950/40 dark:text-orange-400">
                         {t(`heuristic-scan-row-${row.r}-col-9`)}
                       </span>
                     </td>
                   </tr>
                 ))}
-                <tr className="bg-emerald-50 dark:bg-emerald-950/20">
-                  <td colSpan={8} className="border-r border-emerald-100 dark:border-emerald-900/50 px-4 py-3 text-right text-sm font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-wider">
+                <tr className="bg-orange-50 dark:bg-orange-950/20">
+                  <td colSpan={8} className="border-r border-orange-100 dark:border-orange-900/50 px-4 py-3 text-right text-sm font-bold text-orange-800 dark:text-orange-400 uppercase tracking-wider">
                     {t('heuristic-scan-final-avg-label')}
                   </td>
-                  <td className="px-4 py-3 text-center text-sm font-black text-emerald-600 dark:text-emerald-400">
+                  <td className="px-4 py-3 text-center text-sm font-black text-orange-600 dark:text-orange-400">
                     {t('heuristic-scan-final-avg-value')}
                   </td>
                 </tr>

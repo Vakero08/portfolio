@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { LanguajeSelect } from "../languaje";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Header() {
     const { scrollY } = useScroll()
@@ -14,6 +14,7 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
     const t = useTranslations('Header');
+    const locale = useLocale();
 
     useEffect(() => {
         const check = () => setIsMobile(window.innerWidth < 992)
@@ -40,7 +41,7 @@ export default function Header() {
         { href: "/", label: t('home') },
         { href: "/about", label: t('about') },
         { href: "/#portafolio", label: t('portfolio') },
-        { href: "/CV-UXUI-2026.pdf", label: t('cv'), download: "CV-UXUI-2026.pdf" },
+        { href: `/CV-UXUI-${locale}.pdf`, label: t('cv'), download: "CV-UXUI.pdf" },
     ]
 
     return (
@@ -59,9 +60,7 @@ export default function Header() {
                     {isMobile ? (
                         // Mobile: logo/name on left, hamburger on right
                         <>
-                            <div className="flex-1" />
-                            <div className="flex items-center gap-4">
-                                <AnimatedThemeToggler />
+                            <div className="flex-1" >
                                 <button
                                     onClick={() => setMenuOpen(true)}
                                     aria-label="Abrir menú"
@@ -72,21 +71,30 @@ export default function Header() {
                                     <span className="block w-6 h-0.5 bg-black dark:bg-white rounded" />
                                 </button>
                             </div>
+                            <div className="flex items-center gap-4">
+                                <LanguajeSelect />
+                                <AnimatedThemeToggler />
+                            </div>
                         </>
                     ) : (
                         // Desktop
                         <>
                             <div className="flex gap-20 flex-1 justify-center text-xl">
-                                {navLinks.map(link => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        {...(link.download ? { download: link.download } : {})}
-                                        className="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
+                                {navLinks.map(link => {
+                                    const isDownload = !!link.download;
+                                    const Component = isDownload ? "a" : Link;
+
+                                    return (
+                                        <Component
+                                            key={link.href}
+                                            href={link.href}
+                                            {...(isDownload ? { download: link.download } : {})}
+                                            className="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+                                        >
+                                            {link.label}
+                                        </Component>
+                                    );
+                                })}
                             </div>
                             <div className="flex items-center gap-4">
                                 <LanguajeSelect />
@@ -119,23 +127,28 @@ export default function Header() {
                         </button>
 
                         <nav className="flex flex-col items-center gap-10">
-                            {navLinks.map((link, i) => (
-                                <motion.div
-                                    key={link.href}
-                                    initial={{ opacity: 0, y: 24 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.05 * i, duration: 0.3 }}
-                                >
-                                    <Link
-                                        href={link.href}
-                                        {...(link.download ? { download: link.download } : {})}
-                                        onClick={() => setMenuOpen(false)}
-                                        className="text-4xl font-semibold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                            {navLinks.map((link, i) => {
+                                const isDownload = !!link.download;
+                                const Component = isDownload ? "a" : Link;
+
+                                return (
+                                    <motion.div
+                                        key={link.href}
+                                        initial={{ opacity: 0, y: 24 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.05 * i, duration: 0.3 }}
                                     >
-                                        {link.label}
-                                    </Link>
-                                </motion.div>
-                            ))}
+                                        <Component
+                                            href={link.href}
+                                            {...(isDownload ? { download: link.download } : {})}
+                                            onClick={() => setMenuOpen(false)}
+                                            className="text-4xl font-semibold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </Component>
+                                    </motion.div>
+                                );
+                            })}
                         </nav>
                     </motion.div>
                 )}

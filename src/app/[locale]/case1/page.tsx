@@ -438,7 +438,7 @@ export default function TokinAiCaseStudy({ params }: Props) {
             </ul> */}
 
             {/* Personalizacion – Iteraciones (Figma section) */}
-            <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground dark:bg-card">
+            <div className="mt-10 rounded-3xl  px-6 py-10 text-foreground bg-card border">
               {/* Header */}
               <div className="flex items-center gap-3">
                 <Settings className="h-6 w-6 text-primary" />
