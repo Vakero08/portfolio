@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -44,10 +45,12 @@ export default async function RootLayout({
       >
         <ThemeProvider
         >
+
           <NextIntlClientProvider>
             <Header />
 
             {children}
+            <Analytics />
           </NextIntlClientProvider>
           <Footer />
         </ThemeProvider>
