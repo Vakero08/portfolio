@@ -4,26 +4,29 @@
     "description": "Portafolio de Jhonatan Duran - Diseñador UX/UI con experiencia en desarrollo frontend"
   },
   "CardHome": {
-    "cta": "Ver caso de estudio"
+    "cta": "Ver resultados"
   },
   "HomePage": {
     "title": "Hola, Soy ",
-    "job-desc": "Soy Diseñador UX/UI con experiencia en desarrollo frontend. Apasionado por crear experiencias digitales significativas y centradas en el ser humano, combino la creatividad con la comprensión técnica para diseñar interfaces intuitivas.",
+    "job-desc": "Diseñador UX/UI, transformo necesidades de usuarios en experiencias digitales de alto impacto. Combino diseño centrado en el ser humano con mi experiencia técnica para crear productos que la gente ama usar.",
     "portafolio-title": "PORTAFOLIO"
   },
   "Content": {
     "projects": {
       "case1": {
-        "titulo": "TokinAi",
-        "descripcion": "Rediseño integral de una plataforma web enfocada en mejorar la usabilidad, optimizar flujos clave y reducir la fricción del usuario mediante investigación, prototipado y validación."
+        "titulo": "TokinAi: Plataforma de creación de contenido con IA",
+        "subtitulo": "Desde la investigación de usuarios hasta una plataforma escalable impulsado por IA.",
+        "descripcion": "Cómo gestioné el ciclo de vida completo del producto: transformando necesidades en una experiencia intuitiva para emprendedores y creadores de contenido."
       },
       "case2": {
-        "titulo": "Social Alert",
-        "descripcion": "Diseño y prototipado de una aplicación móvil desde cero, cubriendo todo el flujo del usuario desde el login hasta las acciones principales, con enfoque mobile-first."
+        "titulo": "Social Alert: Plataforma de escucha y monitoreo de RR.SS",
+        "subtitulo": "",
+        "descripcion": "Rediseño de una plataforma con gran volumen de datos para eliminar las fricciones en los flujos principales de los usuarios y convertir la sobrecarga de información en conocimientos prácticos."
       },
       "case3": {
-        "titulo": "ScanAudience",
-        "descripcion": "Mejora de una plataforma existente mediante análisis de benchmark, encuestas a usuarios y rediseño de interfaces para simplificar la información y aumentar la eficiencia de uso."
+        "titulo": "ScanAudience: Plataforma de evaluación rendimiento de redes sociales",
+        "subtitulo": "",
+        "descripcion": "Rediseño de una plataforma existente mediante análisis de benchmark, encuestas a usuarios y rediseño de interfaces para simplificar la información y aumentar la eficiencia de uso."
       }
     }
   },
