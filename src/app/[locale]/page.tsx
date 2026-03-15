@@ -40,7 +40,7 @@ export default function Home({ params }: Props) {
           </div>
         </div>
 
-        <div className="grid gap-8 md:flex md:flex-col md:gap-32 ">
+        <div className="grid gap-20 md:flex md:flex-col md:gap-32 ">
           {projects.map((project, index) => {
             return <CardHome project={project} index={index} key={index} />
           })}

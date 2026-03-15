@@ -4,26 +4,29 @@
     "description": "Jhonatan Duran's Portfolio - UX/UI Designer with frontend development experience"
   },
   "CardHome": {
-    "cta": "View case study"
+    "cta": "View results"
   },
   "HomePage": {
     "title": "Hello, I'm ",
-    "job-desc": "I'm a UX/UI Designer with frontend development experience. Passionate about creating meaningful, human-centered digital experiences, I combine creativity with technical understanding to design intuitive interfaces.",
+    "job-desc": "UX/UI Designer, turning user needs into high-impact digital experiences. I combine human-centered design with my technical experience to build products that people love to use.",
     "portafolio-title": "PORTFOLIO"
   },
   "Content": {
     "projects": {
       "case1": {
-        "titulo": "TokinAi",
-        "descripcion": "Comprehensive redesign of a web platform focused on improving usability, optimizing key flows, and reducing user friction through research, prototyping, and validation."
+        "titulo": "TokinAi: AI-powered content creation platform",
+        "subtitulo": "From User Research to a Scalable AI-Driven Platform.",
+        "descripcion": "How I managed the entire end-to-end product lifecycle: turning needs into an intuitive experience for entrepreneurs and content creators."
       },
       "case2": {
-        "titulo": "Social Alert",
-        "descripcion": "Design and prototyping of a mobile application from scratch, covering the entire user flow from login to main actions, with a mobile-first approach."
+        "titulo": "Social Alert: Social Listening and Monitoring Platform",
+        "subtitulo": "",
+        "descripcion": "Redesign of a platform with large volumes of data to eliminate friction in users' main flows and convert information overload into practical knowledge."
       },
       "case3": {
-        "titulo": "ScanAudience",
-        "descripcion": "Enhancement of an existing platform through benchmark analysis, user surveys, and interface redesign to simplify information and increase usage efficiency."
+        "titulo": "ScanAudience: Social Media Performance Evaluation Platform",
+        "subtitulo": "",
+        "descripcion": "Redesign of an existing platform through benchmark analysis, user surveys, and interface redesign to simplify information and increase usage efficiency."
       }
     }
   },
