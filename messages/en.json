@@ -179,7 +179,11 @@
     "learnings-3-desc": "Continuously monitor user usage and gather feedback for improvement. It greatly helped identify friction points for users and enabled modifications and, at times, complete redesigns.",
     "learnings-4": "Involve all stakeholders:",
     "learnings-4-desc": "at different stages is crucial to validate ideas and designs, both with stakeholders and the development team, to maintain communication, stay aligned, and avoid delays due to lack of communication",
-    "more-projects": "More projects"
+    "more-projects": "More projects",
+    "nav-title": "On this page",
+    "nav-overview": "Overview",
+    "nav-research": "Research",
+    "nav-testing": "Testing"
   },
   "Case2": {
     "tag": "Case Study: Web Application Redesign",
@@ -454,7 +458,8 @@
     "learning-2": "Functionality above all",
     "learning-2-desc": "Many design decisions were made based on information gathered from users and the team, since placing certain information in a specific location was essential to streamline their work and navigation on the platform",
     "learning-3": "Involve all stakeholders",
-    "learning-3-desc": "Involving all stakeholders at different stages is crucial to validate ideas and designs, both with stakeholders and with the development team, to maintain good communication and avoid problems during development."
+    "learning-3-desc": "Involving all stakeholders at different stages is crucial to validate ideas and designs, both with stakeholders and with the development team, to maintain good communication and avoid problems during development.",
+    "nav-results": "Final results"
   },
   "Case3": {
     "tag": "Case Study: Partial Redesign",
