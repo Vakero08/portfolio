@@ -1,4 +1,5 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
+import { CaseStudyNav } from "@/components/CaseStudyNav/CaseStudyNav";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { TitleLine } from "@/components/TitleLine";
@@ -19,11 +20,23 @@ export default function SocialAlertCaseStudy({ params }: Props) {
 
   // Enable static rendering
   setRequestLocale(locale);
+
+  const navItems = [
+    { id: "overview", label: t1("nav-overview") },
+    { id: "problema", label: t1("section1-title") },
+    { id: "objetivos", label: t("objetives") },
+    { id: "research", label: t1("nav-research") },
+    { id: "design", label: t1("desing") },
+    { id: "testing", label: t1("nav-testing") },
+    { id: "results", label: t("nav-results") },
+    { id: "learnings", label: t1("learnings") },
+  ];
+
   return (
-    <div className="flex min-h-screen flex-col bg-white  dark:bg-neutral-950 mt-[84px]">
+    <div className="flex min-h-screen flex-col bg-white dark:bg-neutral-950 mt-[84px] xl:ml-[100px]">
 
       {/* Hero Section */}
-      <section className="mx-auto w-full max-w-6xl px-8 py-16">
+      <section id="overview" className="mx-auto w-full max-w-6xl px-8 py-16 scroll-mt-28">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           {t('tag')}
         </div>
@@ -76,10 +89,12 @@ export default function SocialAlertCaseStudy({ params }: Props) {
         </div>
       </section>
 
+      <CaseStudyNav items={navItems} title={t1("nav-title")} />
+
       {/* El Problema */}
       <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={1} titulo={t1('section1-title')} />
+          <TitleLine numero={1} titulo={t1('section1-title')} id="problema" />
           <p className="my-8 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('problem-desc')}
           </p>
@@ -107,7 +122,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* Objetivos */}
       <section className="px-8 py-16">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={1} titulo={"Objetivos"} />
+          <TitleLine numero={2} titulo={t("objetives")} id="objetivos" />
           <div className="grid gap-12 md:grid-cols-2 my-8">
             <div>
               <h3 className="mb-4 text-xl font-bold text-black dark:text-white">{t('objetives')}</h3>
@@ -150,7 +165,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* User Research */}
       <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={2} titulo={"User Research"} />
+          <TitleLine numero={3} titulo={t1('nav-research')} id="research" />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('user-research')}
           </p>
@@ -596,7 +611,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* Diseño */}
       <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={3} titulo={t1('desing')} />
+          <TitleLine numero={4} titulo={t1('desing')} id="design" />
           <p className="mb-12 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 my-8">
             {t('design-desc')}
           </p>
@@ -832,7 +847,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* Testing */}
       <section className="px-8 pb-16">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={4} titulo={"Testing"} />
+          <TitleLine numero={5} titulo={t1('nav-testing')} id="testing" />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('testing-desc')}
           </p>
@@ -857,7 +872,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* Solución Final */}
       <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 pb-16 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={5} titulo={"Resultados Finales"} />
+          <TitleLine numero={6} titulo={t('nav-results')} id="results" />
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {t('final-result')}
           </p>
@@ -888,7 +903,7 @@ export default function SocialAlertCaseStudy({ params }: Props) {
       {/* Aprendizajes */}
       <section className="px-8 pb-16">
         <div className="mx-auto max-w-6xl">
-          <TitleLine numero={5} titulo={t1('learnings')} />
+          <TitleLine numero={7} titulo={t1('learnings')} id="learnings" />
 
           <ul className="space-y-4">
             <li className="flex items-start gap-3">

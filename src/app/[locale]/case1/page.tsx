@@ -1,4 +1,5 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
+import { CaseStudyNav } from "@/components/CaseStudyNav/CaseStudyNav";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { projects } from "@/resources/content";
 import { Check, Clock, Delete, Dot, HelpCircle, IterationCcw, Repeat, Repeat1, Repeat1Icon, Repeat2, Repeat2Icon, SeparatorHorizontal, Settings, X } from "lucide-react";
@@ -17,11 +18,21 @@ export default function TokinAiCaseStudy({ params }: Props) {
   const t = useTranslations('Case1');
   // Enable static rendering
   setRequestLocale(locale);
+
+  const navItems = [
+    { id: "overview", label: t("nav-overview") },
+    { id: "problema", label: t("section1-title") },
+    { id: "research", label: t("nav-research") },
+    { id: "design", label: t("desing") },
+    { id: "testing", label: t("nav-testing") },
+    { id: "learnings", label: t("learnings") },
+  ];
+
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-black mt-[84px]">
+    <div className="flex min-h-screen flex-col bg-white dark:bg-black mt-[84px] xl:ml-25 ">
 
       {/* Hero Section */}
-      <section className="mx-auto w-full max-w-6xl px-8 py-16 ">
+      <section id="overview" className="mx-auto w-full max-w-6xl px-8 py-16 scroll-mt-28">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           {t('tag')}
         </div>
@@ -76,8 +87,11 @@ export default function TokinAiCaseStudy({ params }: Props) {
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{t('duration-desc')}</p>
         </div>
       </div>
+
+      <CaseStudyNav items={navItems} title={t("nav-title")} />
+
       {/* El Problema Section */}
-      <TitleLine numero={1} titulo={t('section1-title')} />
+      <TitleLine numero={1} titulo={t('section1-title')} id="problema" />
 
       <section className="mx-auto w-full max-w-6xl px-8 py-8">
         <div className="flex gap-12 lg:grid-cols-3">
@@ -93,7 +107,7 @@ export default function TokinAiCaseStudy({ params }: Props) {
       </section>
 
       {/* User Research Section */}
-      <TitleLine numero={2} titulo={"User Research"} />
+      <TitleLine numero={2} titulo={t('nav-research')} id="research" />
       <section className="mx-auto w-full max-w-6xl px-8 py-8">
         <div className="flex gap-12 lg:grid-cols-3">
           <div className="">
@@ -423,7 +437,7 @@ export default function TokinAiCaseStudy({ params }: Props) {
       </section>
 
       {/* Design Section */}
-      <TitleLine numero={3} titulo={t('desing')} />
+      <TitleLine numero={3} titulo={t('desing')} id="design" />
       <section className="mx-auto w-full max-w-6xl px-8 py-8">
         <div className="flex gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
@@ -834,7 +848,7 @@ export default function TokinAiCaseStudy({ params }: Props) {
       </section>
 
       {/* Testing Section */}
-      <TitleLine numero={4} titulo={"Testing"} />
+      <TitleLine numero={4} titulo={t('nav-testing')} id="testing" />
       <section className="mx-auto w-full max-w-6xl px-8 py-8">
         <div className="flex gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
@@ -894,7 +908,7 @@ export default function TokinAiCaseStudy({ params }: Props) {
       </section>
 
       {/* Learnings Section */}
-      <TitleLine numero={5} titulo={t('learnings')} />
+      <TitleLine numero={5} titulo={t('learnings')} id="learnings" />
       <section className="mx-auto w-full max-w-6xl px-8 py-16">
         <div className="flex gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">

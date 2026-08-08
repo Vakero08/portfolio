@@ -1,4 +1,5 @@
 import CardHorizontalDemo from "@/components/CardMoreProject";
+import { CaseStudyNav } from "@/components/CaseStudyNav/CaseStudyNav";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageZoom } from "@/components/kibo-ui/image-zoom";
 import { cn } from "@/lib/utils";
@@ -18,11 +19,22 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
   const t1 = useTranslations('Case1')
   // Enable static rendering
   setRequestLocale(locale);
+
+  const navItems = [
+    { id: "overview", label: t1("nav-overview") },
+    { id: "problema", label: t("problems") },
+    { id: "objetivos", label: t("objetives") },
+    { id: "research", label: t("research") },
+    { id: "design", label: t("diseno") },
+    { id: "results", label: t("resultados-e-impacto") },
+    { id: "learnings", label: t("learnings") },
+  ];
+
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px]">
+    <div className="flex min-h-screen flex-col bg-white font-sans dark:bg-neutral-950 mt-[84px] xl:ml-25">
 
       {/* Hero Section */}
-      <section className="mx-auto w-full max-w-6xl px-8 py-16">
+      <section id="overview" className="mx-auto w-full max-w-6xl px-8 py-16 scroll-mt-28">
         <div className="mb-4 w-fit rounded bg-gray-800 px-4 py-2 text-md font-medium text-slate-100 dark:bg-gray-800 dark:text-gray-300">
           {t('tag')}
         </div>
@@ -76,8 +88,10 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
         </div>
       </section>
 
+      <CaseStudyNav items={navItems} title={t1("nav-title")} />
+
       {/* Problemas */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section id="problema" className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 scroll-mt-28 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">{t('problems')}</h2>
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -96,7 +110,7 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
       </section>
 
       {/* Objetivos */}
-      <section className="px-8 py-16">
+      <section id="objetivos" className="px-8 py-16 scroll-mt-28">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">{t('objetives')}</h2>
           <div className="grid gap-8 md:grid-cols-2">
@@ -134,7 +148,7 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
       </section>
 
       {/* Investigación */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section id="research" className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 scroll-mt-28 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">{t('research')}</h2>
           <p className="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -1039,7 +1053,7 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
       </section>
 
       {/* Resultados e impacto */}
-      <section className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 dark:border-neutral-800 dark:bg-neutral-900/30">
+      <section id="results" className="border-t border-neutral-200 bg-neutral-50/50 px-8 py-16 scroll-mt-28 dark:border-neutral-800 dark:bg-neutral-900/30">
         <div className="mx-auto max-w-6xl">
           <h2 className={`mb-6 text-right text-3xl font-bold md:text-4xl text-[#03AADD]`}>{t('resultados-e-impacto')}</h2>
           <ul className="space-y-4">
@@ -1061,7 +1075,7 @@ export default function ScanAudienceCaseStudy({ params }: Props) {
       </section>
 
       {/* Aprendizajes */}
-      <section className="px-8 py-16">
+      <section id="learnings" className="px-8 py-16 scroll-mt-28">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 text-right text-3xl font-bold text-[#03AADD] md:text-4xl">{t('learnings')}</h2>
           <ul className="space-y-4">

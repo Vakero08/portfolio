@@ -179,7 +179,11 @@
     "learnings-3-desc": "Monitorear continuamente el uso de los usuarios, recibir el feedback para mejorar. Ayudó mucho a encontrar en que puntos tenían fricción los usuarios y poder modificar y en ocasiones rediseñar por completo.",
     "learnings-4": "Involucrar todos los actores:",
     "learnings-4-desc": "en las distintas etapas es crucial para validar ideas y diseños, tanto con los stakeholders, como con el equipo de desarrolladores, para mantener una comunicación, misma sintonía y que no se retrase por falta de comunicación",
-    "more-projects": "Más proyectos"
+    "more-projects": "Más proyectos",
+    "nav-title": "En esta página",
+    "nav-overview": "Resumen",
+    "nav-research": "Investigación",
+    "nav-testing": "Testing"
   },
   "Case2": {
     "tag": "Caso de estudio: Rediseño de una aplicación Web",
@@ -454,7 +458,8 @@
     "learning-2": "Funcionalidad ante todo",
     "learning-2-desc": "Muchas decisiones de diseño se las tomó basándonos en la información recabada de los usuarios y del equipo, ya que poner cierta información en un lugar determinado era primordial para agilizar su trabajo y navegación en la plataforma",
     "learning-3": "Involucrar a todos los actores",
-    "learning-3-desc": "Involucrar todos los actores: en las distintas etapas es crucial para validar ideas y diseños, tanto con los stakeholders, como con el equipo de desarrolladores, para mantener una buena comunicación y que no haya problemas en el desarrollo."
+    "learning-3-desc": "Involucrar todos los actores: en las distintas etapas es crucial para validar ideas y diseños, tanto con los stakeholders, como con el equipo de desarrolladores, para mantener una buena comunicación y que no haya problemas en el desarrollo.",
+    "nav-results": "Resultados finales"
   },
   "Case3": {
     "tag": "Caso de estudio: Rediseño Parcial",
